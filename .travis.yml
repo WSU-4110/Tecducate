@@ -1,0 +1,11 @@
+language: python
+python:
+  - "3.8"
+
+install:
+  - pip install -r requirements.txt
+
+script:
+  - python htmlcss/tests/test_views_Susanna.py
+  - python htmlcss/tests/test_views_Omari.py
+  - python htmlcss/tests/test_views_Fahmida.py

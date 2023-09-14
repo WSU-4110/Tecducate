@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Home - LeftOvr</title>
+    
+    <meta name="author" content="Fahmida Chowdhury Fahmi009">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+   
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <link rel="icon" href="{% static 'images/fevicon.png' %}" type="image/gif" />
+    <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
+      <script src="{% static 'js/https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js' %}"></script>
+      <script src="{% static 'js/https://oss.maxcdn.com/respond/1.4.2/respond.min.js' %}"></script><![endif]-->
+</head>
+<!-- body -->
+
+<body class="main-layout">
+<!-- header component-->
+    <header>
+        <!-- header inner -->
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                        <div class="full">
+                            <!-- logo-->
+                            <div class="center-desk">
+                                <div class="logo"> <a href="{% url 'index' %}"><img src="{% static 'images/logo4.jpg' %}" alt="#"></a> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                        <div class="menu-area">
+                            <div class="limit-box">
+                                <nav class="main-menu">
+                                    <ul class="menu-area-main">
+
+                                        <li class="active"> <a href="{% url 'index' %}">Home</a> </li>
+                                        <!-- about -->
+
+                                        <li> <a href="{% url 'about' %}">About us</a> </li>
+                                        <!-- why -->
+
+                                        <li> <a href="{% url 'why' %}"> Why?</a> </li>
+                                        <!-- contact -->
+                                        <li> <a href="{% url 'cont' %}">Contact us</a> </li>
+                                        {% if user.is_authenticated %}
+                                        <!-- login -->
+
+                                        <li>  <a href="{% url 'logout' %}">Logout</a> </li>
+                                        <li>  <a href="{% url 'proPage' %}">Profile</a></li>
+                                        <li>  <a href="{% url 'actionRI'  %}">Rest Profile</a> </li>
+
+                                        {% else %}
+                                        <li> <a href="{% url 'login' %}">Login </a> </li>
+                                        {% endif %}
+                                        <li class="mean-last"> <a href="{% url 'search' %}" onclick="myFunction()">
+                                            <img src="{% static 'images/search_icon.png' %}" alt="#" /></a> </li>
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end header inner -->
+    </header>
+    <!-- end header -->
+
+    <section class="slider_section">
+        <div id="myCarousel" class="carousel slide banner-main" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+
+                  <img class="first-slide" style="width: 1600px; height: 900px;" src="{% static 'images/pizza.jpg' %}" alt="First" >
+                    <article class="container">
+                        <div class="carousel-caption relative">
+                            {% if user.is_authenticated %}
+                            <h1 style="color:white;">Hey, {{user.username}}! <br><strong class="cur" style="color: #CF9695">Welcome to LeftOvr.</strong></h1>
+                            {% else %}
+                            <h1 style="color:white;">Hey, there! <br><strong class="cur" style="color: #CF9695">Welcome to LeftOvr.</strong></h1>
+
+                            {% endif %}
+                            <span style="color: #f7f7f7">We can help you connect to restaurants and customers.</span>
+                            <p style="color: white;">Our platform will help you get free food from restaurants.
+                                <br>The food that will be provided by the restaurant will be leftover food.
+                                <br> This is to reduce food waste.
+                                <br>Choose you role and sign up to our platform. If you are interested.
+                            </p>
+
+                                                                    <!-- button  leaf  restaurant & customer-->
+
+                           }
+                            <div class="button_section"> <a class="main_bt" href="{% url 'customer-register' %}">Customer</a> <a class="main_bt" href="{% url 'restaurant-register' %}">Restaurant</a> </div>
+
+                        </div>
+                    </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="about">
+        <div class="about-bg" style="margin-bottom: 40px;">
+            <div class="container">
+                <div class="row">
+                    <div class="abouttitle">
+                        <h2 style="color:white;">About Us</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="aboutimg">
+                    <img src="{% static 'images/waste.jpg' %}" alt="img"/>
+                    <p>Food waste has been a problem for ages. While many go hungry and even starve death all around the world others throw food away daily. We as individuals throw away food at home but restaurants and grocery stores also throw away ton of food.<br> Through this platform, we wish reduce atleast some amount of food waste by connecting individuals with restaurants.  </p>
+<p> If interested, please join us in our mission</p>
+<hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- end about -->
+
+    <div class="Coach">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage">
+                        <h2>Why <strong class="need">is it important to reduce food waste?</strong></h2>
+                        <span>"Somewhere between 30-40% of the United States' food supply goes to waste."</span> </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-12 ">
+                            <div class="tow-box ">
+                                <i><img src="{% static 'images/1.png' %}" alt="img"  width= "78" height="78"></i>
+                                <p>Thousands of people around the world live with hunger</p>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="tow-box mrgn-top">
+                                <i><img src="{% static 'images/3.png' %}" alt="img" width ="78" height="78"></i>
+                                <p>Our platform will work toward reducing food waste</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-12 pnd-top">
+                            <div class="tow-box ">
+                                <i><img src="{% static 'images/2.png' %}" alt="img" width= "78" height="78"></i>
+                                <p>Almost every day restaurants through away food. </p>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="tow-box mrgn-top">
+                                <i><img src="{% static 'images/3.png' %}" alt="img"  width= "78" height="78" ></i>
+                                <p>Will make individuals aware. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <!-- end Currency -->    
+<hr> 
+<!-- contact -->
+
+    <div class="Contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage3">
+                        <h2>Contact Us</h2>
+                    </div>
+                </div>
+            </div>
+            <h3> If you have any questions, feedbacks, or suggestion, please feel free to contact us. <br> Click <a href="{% url 'custHome' %}"> Contact Us</a></h3>
+            <h3> Thank you</h3>
+            <hr><hr>
+        </div>
+    </div>
+            
+
+    <!-- footer -->
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <div class="JJcoach">
+                            <h3>LeftOver <strong class="coa"> </strong></h3>
+                        </div>
+
+                    </div>
+                    <!-- location  -->
+
+                </div>
+                <div class="row pdn-top-30">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                        <ul class="location_icon">
+                            <li> <img src="{% static 'icon/location.png' %}"> <span>Detroit, Michigan<br>United States</span></li>
+
+
+                        </ul>
+                    </div>
+                    <!-- telephone -->
+
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                        <ul class="location_icon">
+                            <li> <img src="{% static 'icon/tellephone.png' %}"><span>(313)-(00)-(0000)<br>+0000000000</span></li>
+                        </ul>
+                    </div>
+                    <!-- email -->
+
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                        <ul class="location_icon">
+                            <li> <img src="% static 'icon/email.png' %}"><span>LeftOvrDemo@gmail.com<br>LeftOvrDemo@gmail.com</span></li>
+                        </ul>
+                    </div>
+                    <!-- social media -->
+
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                        <ul class="location_icon">
+                            <li> <a href="#"><img src="{% static 'icon/facebook.png' %}"></a></li>
+                            <li> <a href="#"><img src="{% static 'icon/Twitter.png' %}"></a></li>
+                            <li> <a href="#"><img src="{% static 'icon/linkedin.png' %}"></a></li>
+                            <li> <a href="#"><img src="{% static 'icon/google+.png' %}"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- copyright-->
+        <div class="copyright">
+            <div class="container">
+                <p>Copyright 2020 All Right Reserved By <a href="#">LeftOvr Inc.</a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+    <!-- Javascript files-->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+    <script src="{% static 'js/plugin.js' %}"></script>
+
+    <!-- sidebar -->
+    <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+</body>
+
+</html>
