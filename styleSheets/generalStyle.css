@@ -1,0 +1,102 @@
+html {
+  background-color: #CEDEE7; 
+}
+
+body {margin: 0; 
+  background: url("/brandAssets/circuits.jpg");
+  background-repeat:repeat;
+  padding: 0; 
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: auto;
+}
+
+
+h1 {
+  font-size: 3em;
+  margin: 0;
+  text-align: center;
+  text-shadow: 2px 2px white;
+}
+
+
+#newsLetterSignUp {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 1em;
+  align-items: center;
+  padding: 1em;
+  margin: 0;
+}
+
+#newsLetterSignUp h1 {
+  font-size: 1.5em;
+  margin: 0;
+  padding: 1em;
+}
+
+#newsLetterSignUp ul {
+  list-style:disc;
+  list-style-position: inside;
+  padding-right: 2.4em;
+  background-color: white;
+  border-radius: 2%;
+  padding: 1em;
+  margin: 0;
+  width: 100%;
+  max-width: 300px;
+  
+}
+
+#newsLetterSignUp ul li {
+  font-size: 18px;
+}
+
+#pageFooter {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 1em 0em;
+  align-items: center;
+  background: #262626;
+  padding: 1em 0em;
+  color: white;
+  position: relative;
+  align-self: baseline;
+}
+
+#pageFooter h3{
+  font-size: 16px;
+  margin: 0.1em;
+}
+
+#pageFooter p{
+  font-size: 16px;
+  margin: 0.1em;
+  text-align: center;
+}
+
+#pageFooter p a{
+  font-size: 16px;
+  margin: 0.1em;
+  text-align: center;
+  text-transform: none;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+
+#pageFooter p a:hover{
+  font-size: 16px;
+  margin: 0.1em;
+  text-align: center;
+  text-transform: none;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  color: gray;
+}
+
