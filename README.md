@@ -5,7 +5,7 @@ Team members:
 1. Maria Alsamaien (mariasam16)
 2. Susmita Ghosh (Susmita-Rani-Ghosh)
 3. Geovanni Tinoco (GeoT82)
-4. Abdullahi ()
+4. Abdullahi (AbdullahiAyantayo)
 5. Mohammad ()
    
 <h1> About us </h1>
