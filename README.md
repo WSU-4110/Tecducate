@@ -3,7 +3,7 @@
 Team members:
 
 1. Maria Alsamaien (mariasam16)
-2. Susmita Ghosh ()
+2. Susmita Ghosh (Susmita-Rani-Ghosh)
 3. Geovanni Tinoco ()
 4. Abdullahi ()
 5. Mohammad ()
