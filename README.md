@@ -1,4 +1,13 @@
 <h1> <img src ="logo4.jpg" alt="Logo"></h1>
+
+Team members:
+
+1. Maria Alsamaien (mariasam16)
+2. Susmita Ghosh (Susmita-Rani-Ghosh)
+3. Geovanni Tinoco (GeoT82)
+4. Abdullahi (AbdullahiAyantayo)
+5. Mohammad (mhazadegan)
+   
 <h1> About us </h1>
 <p>Food waste has been a problem for ages. <br>
 While many go hungry and even starve to death all around the world,<br>
