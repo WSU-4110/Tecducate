@@ -6,7 +6,7 @@ Team members:
 2. Susmita Ghosh (Susmita-Rani-Ghosh)
 3. Geovanni Tinoco (GeoT82)
 4. Abdullahi (AbdullahiAyantayo)
-5. Mohammad ()
+5. Mohammad (mhazadegan)
    
 <h1> About us </h1>
 <p>Food waste has been a problem for ages. <br>
