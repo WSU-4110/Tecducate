@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-We are aiming to develop a tech learning app...
-=======
 <h1> <img src ="logo4.jpg" alt="Logo"></h1>
 
 Team members:
@@ -20,7 +17,6 @@ but restaurants and grocery stores also throw away a ton of food.<br>
 --------<br>
 Through this platform, we wish reduce atleast some amount of food waste <br>
 by connecting individuals with restaurants.  </p>
->>>>>>> a0c75929891b1037d31e51f6ed3b8170299eb588
 
 #Members:
 1. Geovanni Tinoco [ GeoT82 ]
