@@ -1,0 +1,99 @@
+ html{
+    min-height: 100vh;
+  color:rgb(23, 49, 155);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+  background-color: rgb(23, 49, 155);
+ }
+ header{
+    text-align: center;
+ }
+
+body{
+    min-height: 100vh; 
+    background-color: white;
+   padding-left: 20%;
+   padding-right: 20%;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    text-wrap:wrap;
+    
+}
+footer{
+    text-align: center;
+}
+
+ form{
+    text-align: left;
+    list-style: none;
+    padding: 10px;
+    padding-left: 0;
+    box-shadow:0 0 10px #235aa6;
+    background-color: rgb(161, 224, 239);
+    width: fit-content;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(36, 132, 137);
+    
+}
+
+.Personal-Infomation li{
+    list-style: none;
+ 
+}
+
+input[type="text"]{
+    width: 95%;
+    height: 4.2%;
+    min-height: 20px;
+    font-size: 16px;
+    padding: 5px;
+    border: 2px solid black;
+    /*text color inside the box*/
+    color:rgb(6, 4, 5)
+}
+
+input.valid{
+    background-color: blue;
+}
+input.invalid{
+    background-color: brown;
+}
+
+
+.Prefferences li{
+   
+    list-style: none;
+    text-align:left ;
+}
+
+.Submit-Butoon{
+    color: aliceblue;
+    margin: 1em;
+    border-radius: 5%;
+    border-color: #000000;
+    background-color: rgb(28, 66, 220);
+    box-shadow:0 0 10px #235aa6;
+    font-size: larger;
+    width: 95%;
+    height: 4.2%;
+    min-height: 20px;
+}
+.Submit-Butoon:hover{
+    background-color: rgb(40, 92, 246);
+}
+.Reset-button{
+    margin: 1em;
+    border-radius: 5%;
+    border-color: black;
+    background-color: rgb(202, 138, 237);
+    box-shadow:0 0 10px #8123a6;
+    font-size: larger;
+    width: 95%;
+    height: 4.2%;
+    min-height: 20px;
+}
+.Reset-button:hover{
+    background-color: rgb(164, 81, 241);
+}
