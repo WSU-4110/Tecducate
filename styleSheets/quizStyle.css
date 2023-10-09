@@ -8,6 +8,7 @@
   margin: 1em;
   padding: 10px;
   background-color: lightblue;
+  border-radius: 15px;
   width: 75%;
   align-self: center;
   justify-content: center;
@@ -66,6 +67,17 @@ The 3 blocks include: QuestionSection, SampleSection, and AnswerSection*/
   background-color: coral;
   border-radius: 15px;
   color: white;
+}
+
+.answerBlock a, a:link, a:visited {
+  text-decoration: none;
+  color: white;
+  text-transform: none;
+}
+
+
+.answerBlock:hover {
+  background-color:indianred;
 }
 
 /*Sets the location for the answerSection block on the grid*/
