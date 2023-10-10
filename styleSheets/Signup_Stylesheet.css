@@ -1,27 +1,33 @@
  html{
     min-height: 100vh;
-  color:rgb(23, 49, 155);
+  color:rgb(34, 0, 255);
+  
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
   background-color: rgb(23, 49, 155);
  }
+
  header{
-    text-align: center;
+    text-align: center; 
+    text-shadow: 0 0 15px rgb(81, 153, 54);
  }
+ footer{
+    text-align: center;
+}
 
 body{
     min-height: 100vh; 
     background-color: white;
-   padding-left: 20%;
-   padding-right: 20%;
-   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    padding-left: 20%;
+    padding-right: 20%;
     text-wrap:wrap;
-    
-}
-footer{
-    text-align: center;
+    /*Adding a background image*/
+    background-image: url(/assets/Home-Backgrounf-Image.jpg);
+    background-size: cover; /*image will cover the whole body part*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
  form{
@@ -29,20 +35,18 @@ footer{
     list-style: none;
     padding: 10px;
     padding-left: 0;
-    box-shadow:0 0 10px #235aa6;
-    background-color: rgb(161, 224, 239);
-    width: fit-content;
+    box-shadow:0 0 10px #102747;
+    background-color: rgba(6, 95, 136, 0.758);
     font-size: 18px;
     font-weight: bold;
-    color: rgb(36, 132, 137);
-    
+    color: rgb(255, 255, 255);
+   
 }
 
 .Personal-Infomation li{
     list-style: none;
- 
 }
-
+/*Style for input textbox*/
 input[type="text"]{
     width: 95%;
     height: 4.2%;
@@ -50,24 +54,19 @@ input[type="text"]{
     font-size: 16px;
     padding: 5px;
     border: 2px solid black;
-    /*text color inside the box*/
-    color:rgb(6, 4, 5)
+    color:rgb(6, 4, 5); /*text color inside the box*/
 }
 
-input.valid{
-    background-color: blue;
-}
+
+/*Text color changes for invalid input int eh case of Existing image*/
 input.invalid{
-    background-color: brown;
+    color: brown;
 }
-
-
 .Prefferences li{
-   
     list-style: none;
-    text-align:left ;
 }
 
+/*Style For Submit Button*/
 .Submit-Butoon{
     color: aliceblue;
     margin: 1em;
@@ -83,17 +82,18 @@ input.invalid{
 .Submit-Butoon:hover{
     background-color: rgb(40, 92, 246);
 }
+/*Style For Reset Button*/
 .Reset-button{
     margin: 1em;
     border-radius: 5%;
     border-color: black;
-    background-color: rgb(202, 138, 237);
-    box-shadow:0 0 10px #8123a6;
+    background-color: rgba(126, 208, 231, 0.962);
+    box-shadow:0 0 10px #235ca6;
     font-size: larger;
     width: 95%;
     height: 4.2%;
     min-height: 20px;
 }
 .Reset-button:hover{
-    background-color: rgb(164, 81, 241);
+    background-color: rgb(81, 158, 241);
 }
