@@ -20,13 +20,18 @@
                     <li><label for ="firstlast">First & Last name<br></label><input type="text" name="fullname" id="firstlast" value="Jhon James"></li><br>
                     <li><label for="number">Phone Number<br></label><input type="text" name="number" id="number" value="562-956-5623"></li><br>
                     <li><label for="password">Password<br></label><input type="text" id="password-input" name="password-input" value="..................." disabled></li><br>
-                    <small><input class= "ChnagePass-Button" type="submit" value="Change Password" >
+                    <small><input class= "ChangePass-Button"  onclick="myFunction()" type="button" value="Change Password"> </small>
+                    <input id="NewPassword" type="text" value="New Password" style="display: none;" >
                 </ul>	
                 	
             </filedset>
 
-        
-        <!--Update profile Button-->
-        <input class= "Update-Butoon" type="submit" value="Update" >
+            <input class= "Update-Button" type="submit" value="Update">
+            <script>
+                function myFunction() {
+                    var newPasswordInput = document.getElementById("NewPassword");
+                    newPasswordInput.style.display = "block"; // Display the new password input
+                }
+                </script>
     </body>
 </html>
