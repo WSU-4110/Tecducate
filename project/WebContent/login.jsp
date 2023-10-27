@@ -1,16 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
+<!DOCTYPE html lang="en" >
 <html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Login to Database</title>
-</head>
-<body>
- <center>	<h1> Welcome to Tree Cut Login page </h1> </center>
-	<div align="center">
-		<p> ${loginFailedStr} </p>
-		<form action="login" method="post">
+    <head>
+		<title id = "SignUp">LogIn Page</title>
+		<meta name = "viewport" content= "width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<link rel="shortcut icon" type="image/png" href="BrandSamllLogo.png">
+		<meta name="description" content="Log into Tecducate">
+		<link rel="stylesheet" href="http://localhost:8080/project/style/generalStyle.css" type="text/css">
+	</head>
+
+    <header>
+        <h1>Tecducate</h1>
+    </header>
+
+    <body>
+        <form action="login" method="post">
 			<table border="1" cellpadding="5">
 				<tr>
 					<th>Username: </th>
@@ -32,6 +38,9 @@
 			</table>
 			<a href="register.jsp" target="_self">Register Here</a>
 		</form>
-	</div>
-</body>
+    </body>
+    <footer>
+        <p><small>Tecducate.com  October 1st, 2023</small></p>
+    </footer>
+
 </html>

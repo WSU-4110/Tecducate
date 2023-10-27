@@ -1,66 +1,53 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
+<!DOCTYPE html lang="en" >
 <html>
-<head><title>Registration</title></head>
-<body>
-	<div align="center">
-		<p> ${errorOne } </p>
-		<p> ${errorTwo } </p>
-		<form action="register">
-			<table border="1" cellpadding="5">
-				<tr>
-					<th>Username: </th>
-					<td align="center" colspan="3">
-						<input type="text" name="email" size="45"  value="example@gmail.com" onfocus="this.value=''">
-					</td>
-				</tr>
-				<tr>
-					<th>First Name: </th>
-					<td align="center" colspan="3">
-						<input type="text" name="firstName" size="45" value="FirstName" onfocus="this.value=''">
-					</td>
-				</tr>
-				<tr>
-					<th>Last Name: </th>
-					<td align="center" colspan="3">
-						<input type="text" name="lastName" size="45" value="LastName" onfocus="this.value=''">
-					</td>
-				</tr>
-				<tr>
-					<th>Credit Card: </th>
-					<td align="center" colspan="3">
-						<input type="text" name="creditCard" size="16" value="xxxxxxxxxxxxxxxx" onfocus="this.value=''">
-					</td>
-	
-				</tr>
-				<tr>
-					<th>Phone Number: </th>
-					<td align="center" colspan="3">
-						<input type="text" name="phoneNumber" size="11" value="xxxxxxxxxx" onfocus="this.value=''">
-					</td>
-	
-				</tr>
-				<tr>
-					<th>Password: </th>
-					<td align="center" colspan="3"> 
-						<input type="password" name="password" size="45" value="password" onfocus="this.value=''">
-					</td>
-				</tr>
-				<tr>
-					<th>Password Confirmation: </th>
-					<td align="center" colspan="3">
-						<input type="password" name="confirmation" size="45" value="password" onfocus="this.value=''">
-					</td>
-				
-				</tr>
-				<tr>
-					<td align="center" colspan="5">
-						<input type="submit" value="Register"/>
-					</td>
-				</tr>
-			</table>
-			<a href="login.jsp" target="_self">Return to Login Page</a>
-		</form>
-	</div>
-</body>
+	<head>
+		<title id = "SignUp">SignUp Page</title>
+		<meta name = "viewport" contant= "width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<link rel="shortcut icon" type="image/png" href="http://localhost:8080/project/asset/BrandSmalllogo.png">
+		<meta name="description" content="Create your tecducate account">
+		<link rel="stylesheet" href="http://localhost:8080/project/style/signupStylesheet.css">
+	</head>
+<!--Header of the Page-->
+    <header>
+        <h1>Tecducate</h1>
+        <h2>Get Started with a free account</h2>
+        <p>Create a free tecducate account to start learing & keep record of your progress.
+            Already have a Tecducate account?<a href="LogIn.html">Log in here<a></p> <!--go to log in page directly from sign up page-->
+    </header>
+<!--Sign Up from-->
+    <body>
+         <form action = "register" method = "POST" enctype="text/plain"> <!--Send From information via email-->
+                
+            <filedset>             
+                <ul class="Personal-Infomation">
+                    <li><label for ="firstlast">Name<br></label><input type="text" name="fullname" id="firstlast"></li><br>
+                    <li><label for="email">Email<br></label><input type="text" name="email" id="email"></li><br>
+                    <li><label for="number">Telephone Number<br></label><input type="text" name="number" id="number"></li><br>
+                    <li><label for="password">Password<br></label><input type="text" id="password-input" name="password-input"></li><br>
+                </ul>	
+                	
+            </filedset>
+
+        <filedset>
+            
+                <ul class="Prefferences">
+                    <Legand >Choose what you would like to start learning<em>(Choose one or more)</em></legand>
+                <li><label><input type="checkbox" name="Topic" value="Phishing-email" checked>Identify Phishing Emails</label></li>
+                <li><label><input type="checkbox" name="Topic" value="Phishing-links">Identify Phishing links</label></li>
+                <li><label><input type="checkbox" name="Topic" value="Account-management">How to manage my account</label></li>
+                </ul>
+        </filedset>
+        <!--Submit and Reset Button-->
+        <input class= "Submit-Butoon" type="submit" value="Register" > <input class="Reset-button" type="reset">
+
+	    </form>
+    </body>
+    
+    <!--Footer-->
+    <footer>
+        <p><small>Tecducate.com  October 1st, 2023</small></p>
+    </footer>
+</html>

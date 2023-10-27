@@ -26,9 +26,6 @@
                 <th>First name</th>
                 <th>Last name</th>
                 <th>Password</th>
-               	<th>Credit Card</th>
-               	<th>Phone Number</th>
-               	<th>Client ID</th>
             </tr>
             <c:forEach var="users" items="${listUser}">
                 <tr style="text-align:center">
@@ -36,9 +33,6 @@
                     <td><c:out value="${users.firstName}" /></td>
                     <td><c:out value="${users.lastName}" /></td>
                     <td><c:out value="${users.password}" /></td>
-                    <td><c:out value="${users.creditCard}" /></td>
-                    <td><c:out value="${users.phoneNumber}" /></td>
-                    <td><c:out value="${users.clientID}" /></td>
             </c:forEach>
         </table>
 	</div>
