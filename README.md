@@ -1,13 +1,12 @@
-<h1> <img src =" " alt="Logo"></h1>
-<h1> About us </h1>
-<p>Cybersecurity is an essential aspect of the digital world. <br>
-While younger people with more knowledge of computers and software get the benefit of securing themselves from cyberattacks,<br>
-others face fear and higher chances of being scammed. <br>
-The general population often encounters cyberattacks. <br>
-The younger generation knows how to avoid it and secure their devices whereas the elderly with minimal knowledge of cybersecurity often face problems.<br>
---------<br>
-Through this webpage, we try to educate the elderly generation about phishing emails, phishing links, and account management <br>
-by giving them real-life examples, quizzes, and suggestions for improvement </p>
+<h1> <img src ="logo4.jpg" alt="Logo"></h1>
+
+Team members:
+
+1. Maria Alsamaien (mariasam16)
+2. Susmita Ghosh (Susmita-Rani-Ghosh)
+3. Geovanni Tinoco (GeoT82)
+4. Abdullahi (AbdullahiAyantayo)
+5. Mohammad (mhazadegan)
 
 <h1> The Look <br> <img src ="view.jpe g " alt="Logo"></h1>
 <h2> Some Elements </h2><p>
@@ -47,6 +46,3 @@ by giving them real-life examples, quizzes, and suggestions for improvement </p>
   Geovanni Tinoco 
   Abdullahi
   ```
-   
-
- 
