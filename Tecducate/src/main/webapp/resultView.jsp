@@ -10,9 +10,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Post</title>
-  <link rel="stylesheet" href="http://localhost:8080/project/style/navStyle.css">
-  <link rel="stylesheet" href="http://localhost:8080/project/style/generalStyle.css">
-  <link rel="stylesheet" href="http://localhost:8080/project/style/resultStyle.css">
+  <link rel="stylesheet" href="http://localhost:8080/Tecducate/style/navStyle.css">
+  <link rel="stylesheet" href="http://localhost:8080/Tecducate/style/generalStyle.css">
+  <link rel="stylesheet" href="http://localhost:8080/Tecducate/style/resultStyle.css">
 </head>
 
 <body>

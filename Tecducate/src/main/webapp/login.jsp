@@ -8,7 +8,7 @@
 		<meta charset="utf-8">
 		<link rel="shortcut icon" type="image/png" href="BrandSamllLogo.png">
 		<meta name="description" content="Log into Tecducate">
-		<link rel="stylesheet" href="http://localhost:8080/project/style/generalStyle.css" type="text/css">
+		<link rel="stylesheet" href="http://localhost:8080/Tecducate/style/generalStyle.css" type="text/css">
 	</head>
 
     <header>

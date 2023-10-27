@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
-    <link rel="stylesheet" href="http://localhost:8080/project/style/profileStyleSheet.css" type="text/css">
+    <link rel="stylesheet" href="http://localhost:8080/Tecducate/style/profileStyleSheet.css" type="text/css">
     <style>
 
         #lessons-box {

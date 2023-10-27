@@ -6,9 +6,9 @@
 		<title id = "SignUp">SignUp Page</title>
 		<meta name = "viewport" contant= "width=device-width, initial-scale=1.0">
 		<meta charset="utf-8">
-		<link rel="shortcut icon" type="image/png" href="http://localhost:8080/project/asset/BrandSmalllogo.png">
+		<link rel="shortcut icon" type="image/png" href="http://localhost:8080/Tecducate/asset/BrandSmalllogo.png">
 		<meta name="description" content="Create your tecducate account">
-		<link rel="stylesheet" href="http://localhost:8080/project/style/signupStylesheet.css">
+		<link rel="stylesheet" href="http://localhost:8080/Tecducate/style/signupStylesheet.css">
 	</head>
 <!--Header of the Page-->
     <header>

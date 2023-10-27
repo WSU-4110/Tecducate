@@ -10,9 +10,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Post</title>
-  <link rel="stylesheet" href=http://localhost:8080/project/style/navStyle.css">
-  <link rel="stylesheet" href="http://localhost:8080/project/style/generalStyle.css">
-  <link rel="stylesheet" href="http://localhost:8080/project/style/quizStyle.css">
+  <link rel="stylesheet" href="http://localhost:8080/Tecducate/style/navStyle.css">
+  <link rel="stylesheet" href="http://localhost:8080/Tecducate/style/generalStyle.css">
+  <link rel="stylesheet" href="http://localhost:8080/Tecducate/style/quizStyle.css">
 </head>
 
 <body>
@@ -50,7 +50,7 @@
 
     <!--Dedicated section for each sample example, includes ability to use a sample image as well as any sample text-->
     <div id="sampleSection" class="quizBlock">
-        <img src="http://localhost:8080/project/asset/stressedHomer.gif" alt="Homer Simpson sitting at his office reading notes looking stressed">
+        <img src="http://localhost:8080/Tecducate/asset/stressedHomer.gif" alt="Homer Simpson sitting at his office reading notes looking stressed">
         <p>THIS IS FILLER TEXT</p>
     </div>
   
