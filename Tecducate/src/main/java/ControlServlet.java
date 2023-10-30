@@ -23,6 +23,7 @@ import java.sql.PreparedStatement;
 public class ControlServlet extends HttpServlet {
 	    private static final long serialVersionUID = 1L;
 	    private userDAO userDAO = new userDAO();
+	    private quizDAO quizDAO = new quizDAO();
 	    private String currentUser;
 	    private HttpSession session=null;
 	    
@@ -34,6 +35,7 @@ public class ControlServlet extends HttpServlet {
 	    public void init()
 	    {
 	    	userDAO = new userDAO();
+	    	quizDAO = new quizDAO();
 	    	currentUser= "";
 	    }
 	    
@@ -94,12 +96,6 @@ public class ControlServlet extends HttpServlet {
 	        System.out.println("listPeople finished: 111111111111111111111111111111111111");
 	    }
 	    
-	    	        
-	    private void rootPage(HttpServletRequest request, HttpServletResponse response, String view) throws ServletException, IOException, SQLException{
-	    	System.out.println("root view");
-			request.setAttribute("listUser", userDAO.listAllUsers());
-	    	request.getRequestDispatcher("rootView.jsp").forward(request, response);
-	    }
 	    
 	    private void userPage(HttpServletRequest request, HttpServletResponse response, String view) throws ServletException, IOException, SQLException{
 	    	System.out.println("profile View");
@@ -119,6 +115,12 @@ public class ControlServlet extends HttpServlet {
 	    
 	    private void quizPage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException{
 	    	System.out.println("Quiz View");
+	    	int lessonID = Integer.parseInt(request.getParameter("id"));
+	    	currentUser = (String) session.getAttribute("username");
+	    	System.out.println(currentUser);
+	    	int profLVL = userDAO.getLVL(currentUser);
+	    	quiz quiz = quizDAO.getQuiz(lessonID, profLVL);
+	    	request.setAttribute("quiz", quiz);
 	    	request.getRequestDispatcher("quizView.jsp").forward(request, response);
 	    }
 	    
@@ -151,12 +153,13 @@ public class ControlServlet extends HttpServlet {
 	   	 	String firstName = request.getParameter("firstName");
 	   	 	String lastName = request.getParameter("lastName");
 	   	 	String password = request.getParameter("password");
+	   	 	int prefLesson =Integer.parseInt(request.getParameter("prefLesson")); 
 	   	 	String confirm = request.getParameter("confirmation");
 	   	 	
 	   	 	if (password.equals(confirm)) {
 	   	 		if (!userDAO.checkEmail(email)) {
 		   	 		System.out.println("Registration Successful! Added to database");
-		            user users = new user(email,firstName, lastName, password);
+		            user users = new user(email,firstName, lastName, password, prefLesson);
 		   	 		userDAO.insert(users);
 		   	 		response.sendRedirect("login.jsp");
 	   	 		}

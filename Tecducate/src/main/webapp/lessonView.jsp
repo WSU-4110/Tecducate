@@ -100,10 +100,7 @@
 
 
       <div class="container">
-        
-        <form action = "quiz">
-		<input type = "submit" value = "Go To Quiz!"/>
-		</form>
+        <a href="quiz?id=100">View Quiz!</a>
       </div>
     
     

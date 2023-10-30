@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
-    
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,9 +8,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Post</title>
-  <link rel="stylesheet" href="http://localhost:8080/Tecducate/style/navStyle.css">
-  <link rel="stylesheet" href="http://localhost:8080/Tecducate/style/generalStyle.css">
-  <link rel="stylesheet" href="http://localhost:8080/Tecducate/style/resultStyle.css">
+  <link rel="stylesheet" href="styleSheets/navStyle.css">
+  <link rel="stylesheet" href="styleSheets/generalStyle.css">
+  <link rel="stylesheet" href="styleSheets/resultStyle.css">
 </head>
 
 <body>
@@ -53,9 +51,7 @@
 
       <!--Return button to go to profile page-->
       <section id="returnButton"class="returnBlock">
-        <form action = "profile">
-			<input type = "submit" value = "Go To Profile"/>
-		</form>
+        <a href="Home.html"><h2>Return</h2></a>
       </section>
 
     </div>
