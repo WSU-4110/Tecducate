@@ -30,7 +30,7 @@
 
     <div class="container">
         <h1>Topic Tittle</h1>
-        <img width="400px" height="250" src="assets/Phishing-email-graphic-scaled.jpg"> 
+        <img width="400px" height="250" src="asset/Phishing-email-graphic-scaled.jpg"> 
 
         <p> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit,
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
