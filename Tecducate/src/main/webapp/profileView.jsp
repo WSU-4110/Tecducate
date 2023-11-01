@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
+<!-- request parameters to retrieve preferences -->
+<%
+    String[] chosenLessons = request.getParameterValues("chosenLesson");
+%>
     
 <!DOCTYPE html>
 <html lang="en">
@@ -48,14 +52,35 @@
         <li>Player 3 - Score: 88%</li>
     </ol>
 </div>
-
+<!-- Dynamically adding the lesson content that user have chosen in sign up page.  -->
 
     <div id="lessons-box">
         <h2>Your Lessons</h2>
-        <p>Phishing Email</p>
-        <form action = "lessons">
-			<input type = "submit" value = "Go To Lessons"/>
-		</form>
+        <c:forEach var="chosenLesson" items="${chosenLessons}">
+            <c:choose>
+                <c:when test="${chosenLesson eq 'Phishing-email'}">
+                    <p>Phishing Email Lesson</p>
+                    <%
+                        Lesson phishingEmailLesson = new PhishingEmailLesson();
+                        phishingEmailLesson.display();
+                    %>
+                </c:when>
+                <c:when test="${chosenLesson eq 'Phishing-links'}">
+                    <p>Phishing Links Lesson</p>
+                    <%
+                        Lesson phishingLinksLesson = new PhishingLinksLesson();
+                        phishingLinksLesson.display();
+                    %>
+                </c:when>
+                <c:when test="${chosenLesson eq 'Account-management'}">
+                    <p>Account Management Lesson</p>
+                    <%
+                        Lesson accountManagementLesson = new AccountManagementLesson();
+                        accountManagementLesson.display();
+                    %>
+                </c:when>
+            </c:choose>
+        </c:forEach>
     </div>
 
 

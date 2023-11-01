@@ -6,6 +6,7 @@ public class user
 		protected String password;
 	    protected String firstName;
 	    protected String lastName;
+	    protected String Preferences;
 	 
 	    //constructors
 	    public user() {
@@ -59,6 +60,13 @@ public class user
 	    public void setPassword(String password) {
 	        this.password = password;
 	    }
+	    public String getPreferences() {
+	        return Preferences;
+	    }
+	    public void setPreferences(String Preferences) {
+	        this.Preferences = Preferences;
+	    }
+	    
 
 	  
 	   
