@@ -56,31 +56,10 @@
 
     <div id="lessons-box">
         <h2>Your Lessons</h2>
-        <c:forEach var="chosenLesson" items="${chosenLessons}">
-            <c:choose>
-                <c:when test="${chosenLesson eq 'Phishing-email'}">
-                    <p>Phishing Email Lesson</p>
-                    <%
-                        Lesson phishingEmailLesson = new PhishingEmailLesson();
-                        phishingEmailLesson.display();
-                    %>
-                </c:when>
-                <c:when test="${chosenLesson eq 'Phishing-links'}">
-                    <p>Phishing Links Lesson</p>
-                    <%
-                        Lesson phishingLinksLesson = new PhishingLinksLesson();
-                        phishingLinksLesson.display();
-                    %>
-                </c:when>
-                <c:when test="${chosenLesson eq 'Account-management'}">
-                    <p>Account Management Lesson</p>
-                    <%
-                        Lesson accountManagementLesson = new AccountManagementLesson();
-                        accountManagementLesson.display();
-                    %>
-                </c:when>
-            </c:choose>
-        </c:forEach>
+        <c:forEach var="lesson" items="${chosenLessons}">
+        <p>${lesson.getClass().getSimpleName()}</p>
+        <c:out value="${lesson.display()}" />
+    </c:forEach>
     </div>
 
 
