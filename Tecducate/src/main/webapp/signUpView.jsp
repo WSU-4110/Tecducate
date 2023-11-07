@@ -8,7 +8,7 @@
 		<meta charset="utf-8">
 		<link rel="shortcut icon" type="image/png" href="BrandSamllLogo.png">
 		<meta name="description" content="Create your tecducate account">
-		<link rel="stylesheet" href="http://localhost:8080/Tecducate/style/signupStylesheet.css">
+		<link rel="stylesheet" href="http://localhost:8080/Tecducate/style/signupStyle.css">
 	</head>
 <!--Header of the Page-->
     <header>
