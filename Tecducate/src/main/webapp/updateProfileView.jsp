@@ -10,7 +10,7 @@
 		<link rel="shortcut icon" type="image/png" href="BrandSamllLogo.png">
 		<meta name="description" content="Update your profile">
 		<link rel="stylesheet" href="http://localhost:8080/Tecducate/style/signupStyle.css" type="text/css">
-
+        <link rel="stylesheet" href="http://localhost:8080/Tecducate/style/updateprofileStyle.css" type="text/css">
 	</head>
     <body>
         <h1>Update Account Information</h1>
