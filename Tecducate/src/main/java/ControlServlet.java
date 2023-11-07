@@ -150,16 +150,22 @@ public class ControlServlet extends HttpServlet {
 	           
 	    private void register(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
 	    	String email = request.getParameter("email");
+	    	System.out.println(email);
 	   	 	String firstName = request.getParameter("firstName");
+	   	 	System.out.println(firstName);
 	   	 	String lastName = request.getParameter("lastName");
+	   	 	System.out.println(lastName);
 	   	 	String password = request.getParameter("password");
-	   	 	int prefLesson =Integer.parseInt(request.getParameter("prefLesson")); 
+	   	 	System.out.println(password);
+	   	 	String phoneNumber = request.getParameter("number");
+	   	 	System.out.println(phoneNumber);
 	   	 	String confirm = request.getParameter("confirmation");
+	   	 	System.out.println(confirm);
 	   	 	
 	   	 	if (password.equals(confirm)) {
 	   	 		if (!userDAO.checkEmail(email)) {
 		   	 		System.out.println("Registration Successful! Added to database");
-		            user users = new user(email,firstName, lastName, password, prefLesson);
+		            user users = new user(email,firstName, lastName, password, phoneNumber);
 		   	 		userDAO.insert(users);
 		   	 		response.sendRedirect("login.jsp");
 	   	 		}
@@ -175,6 +181,8 @@ public class ControlServlet extends HttpServlet {
 	   		 request.getRequestDispatcher("register.jsp").forward(request, response);
 	   	 	}
 	    }    
+	    
+	    
 	    private void logout(HttpServletRequest request, HttpServletResponse response) throws IOException {
 	    	currentUser = "";
         		response.sendRedirect("login.jsp");

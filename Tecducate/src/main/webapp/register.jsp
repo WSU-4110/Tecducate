@@ -19,14 +19,16 @@
     </header>
 <!--Sign Up from-->
     <body>
-         <form action = "register" method = "POST" enctype="text/plain"> <!--Send From information via email-->
+         <form action = "register"> <!--Send From information via email-->
                 
             <filedset>             
                 <ul class="Personal-Infomation">
-                    <li><label for ="firstlast">Name<br></label><input type="text" name="fullname" id="firstlast"></li><br>
-                    <li><label for="email">Email<br></label><input type="text" name="email" id="email"></li><br>
-                    <li><label for="number">Telephone Number<br></label><input type="text" name="number" id="number"></li><br>
-                    <li><label for="password">Password<br></label><input type="text" id="password-input" name="password-input"></li><br>
+                    <li><label for ="firstName">First Name<br></label><input type="text" name="firstName""></li><br>
+                    <li><label for ="lastName">Last Name<br></label><input type="text" name="lastName"></li><br>
+                    <li><label for="email">Email<br></label><input type="text" name="email"></li><br>
+                    <li><label for="number">Telephone Number<br></label><input type="text" name="number"></li><br>
+                    <li><label for="password">Password<br></label><input type="password" name="password"></li><br>
+                    <li><label for="confirmation">Password<br></label><input type="password" name="confirmation"></li><br>
                 </ul>	
                 	
             </filedset>
