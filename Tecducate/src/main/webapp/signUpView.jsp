@@ -8,7 +8,7 @@
 		<meta charset="utf-8">
 		<link rel="shortcut icon" type="image/png" href="BrandSamllLogo.png">
 		<meta name="description" content="Create your tecducate account">
-		<link rel="stylesheet" href="/styleSheets/Signup_Stylesheet.css">
+		<link rel="stylesheet" href="http://localhost:8080/Tecducate/style/signupStyle.css">
 	</head>
 <!--Header of the Page-->
     <header>
@@ -19,7 +19,7 @@
     </header>
 <!--Sign Up from-->
     <body>
-         <form action = "susmitaranighosh03@gmail.com" method = "POST" enctype="text/plain"> <!--Send From information via email-->
+         <form action = "profileView.jsp" method="POST"> <!--Send From information to profile page-->
                 
             <filedset>             
                 <ul class="Personal-Infomation">
@@ -34,10 +34,10 @@
         <filedset>
             
                 <ul class="Prefferences">
-                    <Legand >Choose what you would like to start learning<em>(Choose one or more)</em></legand>
-                <li><label><input type="checkbox" name="Topic" value="Phishing-email" checked>Identify Phishing Emails</label></li>
-                <li><label><input type="checkbox" name="Topic" value="Phishing-links">Identify Phishing links</label></li>
-                <li><label><input type="checkbox" name="Topic" value="Account-management">How to manage my account</label></li>
+                <Legand >Choose what you would like to start learning<em>(Choose one or more)</em></legand>
+                <li><input type="checkbox" name="chosenLesson" value="Phishing-email">Phishing-email</li>
+                <li><input type="checkbox" name="chosenLesson" value="Phishing-links">Phishing-links</li>
+                <li><input type="checkbox" name="chosenLesson" value="Account-management">Account-management</li>
                 </ul>
         </filedset>
         <!--Submit and Reset Button-->

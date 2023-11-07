@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 <!DOCTYPE html lang="en" >
 <html>
     <head>
@@ -9,6 +10,7 @@
 		<link rel="shortcut icon" type="image/png" href="BrandSamllLogo.png">
 		<meta name="description" content="Log into Tecducate">
 		<link rel="stylesheet" href="http://localhost:8080/Tecducate/style/signupStyle.css" type="text/css">
+		<link rel="stylesheet" href="http://localhost:8080/Tecducate/style/loginStyle.css" type="text/css">
 	</head>
 
     <header>
@@ -36,6 +38,12 @@
 					</td>
 				</tr>
 			</table>
+			
+			<!-- Display error message for invalid input -->
+			<c:if test= "${not empty loginStr}">
+				<div class="errir-message">${loginStr}</div>
+			</c:if>
+			
 			<a href="register.jsp" target="_self">Register Here</a>
 		</form>
     </body>

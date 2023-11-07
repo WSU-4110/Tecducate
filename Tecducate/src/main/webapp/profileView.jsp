@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
-    
+<!-- request parameters to retrieve preferences -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,7 +49,7 @@
         <li>Player 3 - Score: 88%</li>
     </ol>
 </div>
-
+<!-- Dynamically adding the lesson content that user have chosen in sign up page.  -->
 
     <div id="lessons-box">
         <h2>Your Lessons</h2>
@@ -59,7 +60,7 @@
     </div>
 
 
-    <a href="settings.html" id="settings-icon">
+    <a href="settings.jsp" id="settings-icon">
         <img src="http://localhost:8080/project/assets/settings-icon.png" alt="Settings">
     </a>
 
