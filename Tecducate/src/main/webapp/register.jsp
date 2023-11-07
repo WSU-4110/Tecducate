@@ -8,14 +8,14 @@
 		<meta charset="utf-8">
 		<link rel="shortcut icon" type="image/png" href="http://localhost:8080/Tecducate/asset/BrandSmalllogo.png">
 		<meta name="description" content="Create your tecducate account">
-		<link rel="stylesheet" href="http://localhost:8080/Tecducate/style/signupStylesheet.css">
+		<link rel="stylesheet" href="http://localhost:8080/Tecducate/style/signupStyle.css" type="text/css">
 	</head>
 <!--Header of the Page-->
     <header>
         <h1>Tecducate</h1>
         <h2>Get Started with a free account</h2>
-        <p>Create a free tecducate account to start learing & keep record of your progress.
-            Already have a Tecducate account?<a href="LogIn.html">Log in here<a></p> <!--go to log in page directly from sign up page-->
+        <p>Create a free tecducate account to start learning & keep record of your progress.
+            Already have a Tecducate account?<a href="login.jsp">Log in here<a></p> <!--go to log in page directly from sign up page-->
     </header>
 <!--Sign Up from-->
     <body>
@@ -28,7 +28,7 @@
                     <li><label for="email">Email<br></label><input type="text" name="email"></li><br>
                     <li><label for="number">Telephone Number<br></label><input type="text" name="number"></li><br>
                     <li><label for="password">Password<br></label><input type="password" name="password"></li><br>
-                    <li><label for="confirmation">Password<br></label><input type="password" name="confirmation"></li><br>
+                    <li><label for="confirmation">Confirm Password<br></label><input type="password" name="confirmation"></li><br>
                 </ul>	
                 	
             </filedset>
