@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
+
     
 <!DOCTYPE html>
 <html lang="en">
@@ -16,23 +17,53 @@
 </head>
 
 <body>
+
     <header>
-        <nav>
-            <ul>
-                <li><a href="#">Tecduate</a></li>
-                <li><a href="#">About Us </a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Sign Up</a></li>
-                <li><a href="#">Log in</a></li>
-            </ul>
-        </nav> 
+    
+    	<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a class="navbar-brand" href="#">Hidden brand</a>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Tecduate</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Sign Up</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Log in</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
     </header>
 
     <div class="container">
-        <h1>Topic Tittle</h1>
-        <img width="400px" height="250" src="asset/Phishing-email-graphic-scaled.jpg"> 
+        <h1>Topic Title</h1>
+        <div class="container text-center">
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-6 ">
+       <img class="image" src="asset/Phishing-email-graphic-scaled.jpg" style="max-width: 90%"> 
 
-        <p> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    </div>
+    <div class="col-12 col-md-6 col-lg-6">
+    <p>  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -41,6 +72,11 @@
               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              
+    </div>
+  </div>
+</div>
+
 
         <div class="panel-group" id="accordion">
           <div class="panel panel-default">
@@ -108,6 +144,7 @@
         42 W Warren Ave, Detroit, MI | 313-000-0000 | Tecducate@gmail.com
     </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 
 </html>
