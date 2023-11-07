@@ -47,7 +47,7 @@ public class userDAO
             } catch (ClassNotFoundException e) {
                 throw new SQLException(e);
             }
-            connect = (Connection) DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/userDatabase?allowPublicKeyRetrieval=true&useSSL=false&user=root&password=pass1234");
+            connect = (Connection) DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/webDB?allowPublicKeyRetrieval=true&useSSL=false&user=root&password=pass1234");
             System.out.println(connect);
         }
     }
@@ -75,7 +75,7 @@ public class userDAO
                 throw new SQLException(e);
             }
             connect = (Connection) DriverManager
-  			      .getConnection("jdbc:mysql://127.0.0.1:3306/userDatabase?allowPublicKeyRetrieval=true&"
+  			      .getConnection("jdbc:mysql://127.0.0.1:3306/webDB?allowPublicKeyRetrieval=true&"
   			          + "useSSL=false&user=" + username + "&password=" + password);
             System.out.println(connect);
         }
@@ -94,9 +94,11 @@ public class userDAO
             String firstName = resultSet.getString("firstName");
             String lastName = resultSet.getString("lastName");
             String password = resultSet.getString("password");
+            int prefLesson = resultSet.getInt("prefLesson");
+            int profLVL = resultSet.getInt("profLVL");
 
              
-            user users = new user(email,firstName,lastName,password);
+            user users = new user(email,firstName,lastName,password,prefLesson, profLVL);
             listUser.add(users);
         }        
         resultSet.close();
@@ -136,7 +138,7 @@ public class userDAO
     }
      
     public boolean update(user users) throws SQLException {
-        String sql = "update User set firstName=?, lastName =?,password = ?,creditCard = ?, phoneNumber = ? where email = ?";
+        String sql = "update User set firstName=?, lastName =?,password = ? where email = ?";
         connect_func();
         
         preparedStatement = (PreparedStatement) connect.prepareStatement(sql);
@@ -148,6 +150,29 @@ public class userDAO
         boolean rowUpdated = preparedStatement.executeUpdate() > 0;
         preparedStatement.close();
         return rowUpdated;     
+    }
+    
+    public int getLVL(String email) throws SQLException {
+    	int LVL = 0;
+        String sql = "SELECT profLVL FROM User WHERE email = ?";
+         
+        connect_func();
+         
+        preparedStatement = (PreparedStatement) connect.prepareStatement(sql);
+        preparedStatement.setString(1, email);
+         
+        ResultSet resultSet = preparedStatement.executeQuery();
+         
+        if (resultSet.next()) {
+            int profLVL = resultSet.getInt("profLVL");
+            
+            LVL = profLVL;
+        }
+         
+        resultSet.close();
+        statement.close();
+         
+        return LVL;
     }
     
     public user getUser(String email) throws SQLException {
@@ -165,8 +190,10 @@ public class userDAO
             String firstName = resultSet.getString("firstName");
             String lastName = resultSet.getString("lastName");
             String password = resultSet.getString("password");
+            int prefLesson = resultSet.getInt("prefLesson");
+            int profLVL = resultSet.getInt("profLVL");
             
-            user = new user(email, firstName, lastName, password);
+            user = new user(email, firstName, lastName, password, prefLesson, profLVL);
         }
          
         resultSet.close();

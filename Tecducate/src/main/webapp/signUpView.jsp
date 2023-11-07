@@ -34,7 +34,7 @@
         <filedset>
             
                 <ul class="Prefferences">
-                    <Legand >Choose what you would like to start learning<em>(Choose one or more)</em></legand>
+                <Legand >Choose what you would like to start learning<em>(Choose one or more)</em></legand>
                 <li><input type="checkbox" name="chosenLesson" value="Phishing-email">Phishing-email</li>
                 <li><input type="checkbox" name="chosenLesson" value="Phishing-links">Phishing-links</li>
                 <li><input type="checkbox" name="chosenLesson" value="Account-management">Account-management</li>

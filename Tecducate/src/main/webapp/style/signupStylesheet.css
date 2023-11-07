@@ -22,7 +22,7 @@ body{
     background-color: white;
     padding-left: 20%;
     padding-right: 20%;
-    text-wrap:wrap;
+   	flex-wrap:wrap;
     /*Adding a background image*/
     background-image: url(/assets/Home-Backgrounf-Image.jpg);
     background-size: cover; /*image will cover the whole body part*/
