@@ -15,11 +15,13 @@
         <h1>Tecducate</h1>
         <h2>Get Started with a free account</h2>
         <p>Create a free tecducate account to start learning & keep record of your progress.
-            Already have a Tecducate account?<a href="login.jsp">Log in here<a></p> <!--go to log in page directly from sign up page-->
+         Already have a Tecducate account?<a href="login.jsp">Log in here<a></p> <!--go to log in page directly from sign up page-->
     </header>
 <!--Sign Up from-->
     <body>
+
          <form action = "register"> <!--Send From information via email-->
+
                 
             <filedset>             
                 <ul class="Personal-Infomation">

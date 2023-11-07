@@ -15,7 +15,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.Statement;
 import java.sql.PreparedStatement;
 
@@ -74,9 +73,14 @@ public class ControlServlet extends HttpServlet {
         	case "/logout":
         		logout(request,response);
         		break;
+        	
         	 case "/listUser": 
                  System.out.println("The action is: listUser");
                  listUser(request, response);           	
+                 break;
+        	 case "/update": 
+                 System.out.println("The action is: Update");
+                 update(request, response);           	
                  break;
 	    	}
 	    }
@@ -188,11 +192,44 @@ public class ControlServlet extends HttpServlet {
         		response.sendRedirect("login.jsp");
         	}
 	    
+	    private void update(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException, SQLException {
+	    	String email = request.getParameter("email");
+	   	 	String firstName = request.getParameter("firstName");
+	   	 	String lastName = request.getParameter("lastName");
+	   	 	String password = request.getParameter("password");
+	   	 	String confirm = request.getParameter("confirmation");
+	   	 	
+	   	 if (password.equals(confirm)) {
+	   		user existingUser = userDAO.getUser(email);
+
+	        if (existingUser != null) {
+	            // Update the user's information
+	            existingUser.setFirstName(firstName);
+	            existingUser.setLastName(lastName);
+	            existingUser.setPassword(password);
+
+	            // Call the DAO method to update the user in the database
+	            userDAO.update(existingUser);
+
+	            response.sendRedirect("profile.jsp"); // Redirect to the user's profile page
+	        } else {
+	            System.out.println("User not found.");
+	            request.setAttribute("error", "User not found.");
+	            request.getRequestDispatcher("updateProfile.jsp").forward(request, response);
+	        }
+	    } else {
+	        System.out.println("Password and Password Confirmation do not match.");
+	        request.setAttribute("error", "Password and Password Confirmation do not match.");
+	        request.getRequestDispatcher("updateProfile.jsp").forward(request, response);
+	    }
+	   	 }
+	    }
 	    
 	    
 	    
 	    
-}
+	    
+
 	        
 	        
 	    

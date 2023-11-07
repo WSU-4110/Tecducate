@@ -10,6 +10,7 @@ public class user
 	    protected int prefLesson;
 	    protected int profLVL;
 	    protected int userID;
+
 	 
 	    //constructors
 	    public user() {
@@ -37,7 +38,6 @@ public class user
 	    	setProfLVL(profLVL);
 	    	setUserID(userID);
 	    }
-	    
 	    
 	    public user(String email,String firstName, String lastName, String password, String phoneNum, int prefLesson) 
 	    {
@@ -80,7 +80,7 @@ public class user
 	    public void setPassword(String password) {
 	        this.password = password;
 	    }
-	    
+
 	    public String getPhoneNum() {
 	        return phoneNum;
 	    }
@@ -101,13 +101,12 @@ public class user
 	    public void setPrefLesson(int prefLesson) {
 	        this.prefLesson = prefLesson;
 	    }
-	    
+
 	    public int getUserID() {
 	        return profLVL;
 	    }
 	    public void setUserID(int userID) {
 	        this.userID = userID;
 	    }
-	  
-	   
-	}
+	    
+}
