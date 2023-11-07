@@ -41,17 +41,19 @@
 -->
 
   <!--Main section for all quiz page elements-->
+
+  
   <main id="contentSection">
 
     <!--Dedicated section for each question-->
     <div id="questionSection" class="quizBlock">
-      <h1>Question1: Sample Text</h1>
+      <h1>${quiz.question}</h1>
     </div>
 
     <!--Dedicated section for each sample example, includes ability to use a sample image as well as any sample text-->
     <div id="sampleSection" class="quizBlock">
         <img src="http://localhost:8080/Tecducate/asset/stressedHomer.gif" alt="Homer Simpson sitting at his office reading notes looking stressed">
-        <p>THIS IS FILLER TEXT</p>
+        <p>${quiz.directions}</p>
     </div>
   
     <!--Dedicated section to select the correct answer out of 4 possible choices-->
@@ -59,25 +61,25 @@
 
       <!--Each answer block has their own unique text entry-->
       <section id="answer1" class="answerBlock">
-        <form action = "result">
-			<input type = "submit" value = "Go To Result"/>
-		</form>
+        <a href="result"><h2>${quiz.ansr1}</h2></a>
       </section>
 
       <section id="answer2" class="answerBlock">
-        <a href="resultPage.html"><h2>SampleText</h2></a>
+        <a href="result"><h2>${quiz.ansr4}</h2></a>
       </section>
 
       <section id="answer3" class="answerBlock">
-        <a href="resultPage.html"><h2>SampleText</h2></a>
+        <a href="result"><h2>${quiz.ansr3}</h2></a>
       </section>
 
       <section id="answer4" class="answerBlock">
-        <a href="resultPage.html"><h2>SampleText</h2></a>
+        <a href="result"><h2>${quiz.ansr2}</h2></a>
       </section>
     </div>
   
   </main>
+  
+
 
   <!--Dedicated section for website footer to provide contact information-->
   <footer id="pageFooter">

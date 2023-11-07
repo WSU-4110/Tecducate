@@ -8,9 +8,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Post</title>
-  <link rel="stylesheet" href="styleSheets/navStyle.css">
-  <link rel="stylesheet" href="styleSheets/generalStyle.css">
-  <link rel="stylesheet" href="styleSheets/resultStyle.css">
+  <link rel="stylesheet" href="http://localhost:8080/Tecducate/style/navStyle.css">
+  <link rel="stylesheet" href="http://localhost:8080/Tecducate/style/generalStyle.css">
+  <link rel="stylesheet" href="http://localhost:8080/Tecducate/style/resultStyle.css">
 </head>
 
 <body>
@@ -51,7 +51,7 @@
 
       <!--Return button to go to profile page-->
       <section id="returnButton"class="returnBlock">
-        <a href="Home.html"><h2>Return</h2></a>
+        <a href="profile"><h2>Return</h2></a>
       </section>
 
     </div>
