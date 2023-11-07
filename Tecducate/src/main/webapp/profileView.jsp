@@ -2,10 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 <!-- request parameters to retrieve preferences -->
-<%
-    String[] chosenLessons = request.getParameterValues("chosenLesson");
-%>
-    
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,14 +53,14 @@
 
     <div id="lessons-box">
         <h2>Your Lessons</h2>
-        <c:forEach var="lesson" items="${chosenLessons}">
-        <p>${lesson.getClass().getSimpleName()}</p>
-        <c:out value="${lesson.display()}" />
-    </c:forEach>
+        <p>Phishing Email</p>
+        <form action = "lessons">
+			<input type = "submit" value = "Go To Lessons"/>
+		</form>
     </div>
 
 
-    <a href="settings.html" id="settings-icon">
+    <a href="settings.jsp" id="settings-icon">
         <img src="http://localhost:8080/project/assets/settings-icon.png" alt="Settings">
     </a>
 
