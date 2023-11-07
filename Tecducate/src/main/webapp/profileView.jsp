@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
-<!-- request parameters to retrieve preferences -->
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,31 +10,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
-    <link rel="stylesheet" href="http://localhost:8080/Tecducate/style/profileStyleSheet.css" type="text/css">
-    <style>
-
-        #lessons-box {
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Styling for the settings icon */
-        #settings-icon {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="http://localhost:8080/Tecducate/style/profileStyleSheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome CSS -->
 </head>
 <body>
     <header>
         <h1>Profile Page</h1>
+        <a href="#" id="settings-icon"><i class="fas fa-cog"></i> Settings</a>
     </header>
 
-    <section id="user-info">
+    <section class="user-info-box">
         <h2>User Information</h2>
         <p><strong>Name:</strong> Mohammad Azadegan</p>
         <p><strong>Email:</strong> testing123@example.com</p>
@@ -41,31 +27,36 @@
     </section>
 
 
-<div id="leaderboard-box" class="quiz-scores">
-    <h2>Leaderboard</h2>
-    <ol>
-        <li>Player 1 - Score: 95%</li>
-        <li>Player 2 - Score: 92%</li>
-        <li>Player 3 - Score: 88%</li>
-    </ol>
-</div>
-<!-- Dynamically adding the lesson content that user have chosen in sign up page.  -->
+    <section class="lessons-box">
 
-    <div id="lessons-box">
         <h2>Your Lessons</h2>
-        <p>Phishing Email</p>
-        <form action = "lessons">
-			<input type = "submit" value = "Go To Lessons"/>
-		</form>
-    </div>
+        <p><strong>Lesson:</strong> Phishing Email</p>
+        <button id="go-to-lesson-button"><i class="fas fa-graduation-cap"></i> Go to lesson</button>
+    </section>
 
 
-    <a href="settings.jsp" id="settings-icon">
-        <img src="http://localhost:8080/project/assets/settings-icon.png" alt="Settings">
-    </a>
+    <section class="quiz-scores">
+        <h2>Leaderboard</h2>
+        <ol>
+            <li>Player 1 - Score: 95%</li>
+            <li>Player 2 - Score: 92%</li>
+            <li>Player 3 - Score: 88%</li>
+        </ol>
+    </section>
+
 
     <footer>
         <p>&copy; 2023 Tecducate</p>
     </footer>
+    <script>
+        document.getElementById("settings-icon").addEventListener("click", function () {
+            window.location.href = "settingsView.jsp";
+        });
+
+        document.getElementById("go-to-lesson-button").addEventListener("click", function () {
+            window.location.href = "lessonView.jsp";
+        });
+    </script>
+
 </body>
 </html>
