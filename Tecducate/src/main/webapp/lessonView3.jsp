@@ -55,11 +55,11 @@
     </header>
 
     <div class="container">
-        <h1>Phishing Emails</h1>
+        <h1>Account Management</h1>
         <div class="container text-center">
   <div class="row">
     <div class="col-12 col-md-6 col-lg-6 ">
-       <img class="image" src="asset/Phishing-email-graphic-scaled.jpg" style="max-width: 90%"> 
+       <img class="image" src="asset/Key+Account+Management.jpg" style="max-width: 80%"> 
 
     </div>
     <div class="col-12 col-md-6 col-lg-6">
@@ -77,12 +77,11 @@
   </div>
 </div>
 
-
         <div class="panel-group" id="accordion">
           <div class="panel panel-default">
             <div class="panel-heading">
               <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">How Do You Identify a Phishing Email?</a>
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">How to Create a Strong Password?</a>
               </h4>
             </div>
             <div id="collapse1" class="panel-collapse collapse">
@@ -98,7 +97,7 @@
           <div class="panel panel-default">
             <div class="panel-heading">
               <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">How To Prevent Yourself From It?</a>
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">How to Create an Account?</a>
               </h4>
             </div>
             <div id="collapse2" class="panel-collapse collapse">
@@ -114,7 +113,7 @@
           <div class="panel panel-default">
             <div class="panel-heading">
               <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">What To Do If You Responded To One Without Knowing?</a>
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">How to Completely Delete Your Account?</a>
               </h4>
             </div>
             <div id="collapse3" class="panel-collapse collapse">
