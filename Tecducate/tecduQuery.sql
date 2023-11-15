@@ -27,7 +27,7 @@ create table if not exists Quiz(
     lessonID int not null default 0,
     LVL int not null,
     directions varchar (150) not null default 'Click The Correct Answer',
-    question varchar (100) not null default 'Question Not Loaded',
+    question varchar (150) not null default 'Question Not Loaded',
     ansr1 varchar (50) not null default 'A',
     ansr2 varchar (50) not null default 'B',
     ansr3 varchar (50) not null default 'C',
