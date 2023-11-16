@@ -1,4 +1,4 @@
-import java.math.*;
+
 
 public class quiz 
 {
@@ -47,7 +47,12 @@ public class quiz
 	        return directions;
 	    }
 	    public void setDirections(String directions) {
-	        this.directions = directions;
+	    	if (directions.length() <= 150 & !directions.equalsIgnoreCase("")) {
+	    		this.directions = directions;
+	    	} else {
+	    		this.directions = "Sample Directions";
+	    	}
+	        
 	    }
 	    
 	    
@@ -55,7 +60,11 @@ public class quiz
 	        return question;
 	    }
 	    public void setQuestion(String question) {
-	        this.question = question;
+	    	if (question.length() <= 150 & !question.equalsIgnoreCase("")) {
+	    		this.question = question;
+	    	} else {
+	    		this.question = "Sample Question";
+	    	}
 	    }
 
 	    
@@ -63,7 +72,11 @@ public class quiz
 	        return ansr1;
 	    }
 	    public void setAnsr1(String ansr1) {
-	        this.ansr1 = ansr1;
+	    	if (ansr1.length() <= 50 & !ansr1.equalsIgnoreCase("")) {
+	    		this.ansr1 = ansr1;
+	    	} else {
+	    		this.ansr1 = "Sample Answer";
+	    	}
 	    }
 
 	    
@@ -95,7 +108,10 @@ public class quiz
 	        return quizID;
 	    }
 	    public void setQuizID(int quizID) {
-	    	this.quizID = quizID;
+	    	if (quizID > 0) 
+	    		this.quizID = quizID;
+	    	else 
+	    		this.quizID = 0;
 	    }
 	    
 	   
@@ -103,7 +119,10 @@ public class quiz
 	        return lessonID;
 	    }
 	    public void setLessonID(int lessonID) {
-	    	this.lessonID = lessonID;
+	    	if (lessonID > 0) 
+	    		this.lessonID = lessonID;
+	    	else 
+	    		this.lessonID = 0;
 	    }
 	    
 	    

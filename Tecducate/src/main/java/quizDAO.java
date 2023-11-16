@@ -132,6 +132,33 @@ public class quizDAO
          
         return quiz;
     }
+    
+    
+    
+    public String getCorrectAnsr(int quizID) throws SQLException {
+    	String correctAnsr = "";
+    	
+    	System.out.println("GET CORRECT ANSWER IS RUNNING");
+        String sql = "SELECT correctAnsr FROM Quiz WHERE quizID = ?;";
+         
+        connect_func();
+         
+        preparedStatement = (PreparedStatement) connect.prepareStatement(sql);
+        preparedStatement.setInt(1, quizID);
+         
+        ResultSet resultSet = preparedStatement.executeQuery();
+         
+        if (resultSet.next()) {
+            correctAnsr = resultSet.getString("correctAnsr");
+        }
+         
+        System.out.println(correctAnsr);
+        
+        resultSet.close();
+        preparedStatement.close();
+         
+        return correctAnsr;
+    }
 
       
     
