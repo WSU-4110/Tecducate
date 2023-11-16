@@ -8,16 +8,16 @@ CREATE TABLE if not exists User(
 	password VARCHAR(20) NOT NULL, 
     phoneNumber varchar(20) NOT NULL Default '0',
     prefLesson int not null default 0,
-    profLVL int not null default 0,
+    profLVL int not null default 1,
 	userID INT(10) NOT NULL auto_increment,
 	PRIMARY KEY (userID)
 ); 
 alter table user auto_increment = 500;
     
-insert into User(email, firstName, lastName, password, profLVL)
-values ('susie@gmail.com', 'Susie ', 'Guzman', 'susie1234', 1),
-		('test', 'test', 'test', 't1234', 2),
-		('root', 'default', 'default','pass1234', 3);
+insert into User(email, firstName, lastName, password, profLVL, prefLesson)
+values ('susie@gmail.com', 'Susie ', 'Guzman', 'susie1234', 1, 100),
+		('test', 'test', 'test', 't1234', 2, 101),
+		('root', 'default', 'default','pass1234', 3, 102);
 select * from User;  
 
 
@@ -32,6 +32,7 @@ create table if not exists Quiz(
     ansr2 varchar (50) not null default 'B',
     ansr3 varchar (50) not null default 'C',
     ansr4 varchar (50) not null default 'D',
+    correctAnsr varchar(50) not null default 'A',
     primary key(quizID),
     foreign key(lessonID) references Lesson(lessonID)
 );

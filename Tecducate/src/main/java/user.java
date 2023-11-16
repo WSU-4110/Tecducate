@@ -41,7 +41,7 @@ public class user
 	    
 	    public user(String email,String firstName, String lastName, String password, String phoneNum, int prefLesson) 
 	    {
-	    	this(firstName,lastName,password, prefLesson, 0, 0);
+	    	this(firstName,lastName,password, prefLesson, 1, 0);
 	    	setEmail(email);
 	    	setPhoneNum(phoneNum);
 	    }
@@ -99,7 +99,10 @@ public class user
 	        return prefLesson;
 	    }
 	    public void setPrefLesson(int prefLesson) {
-	        this.prefLesson = prefLesson;
+	    	if (prefLesson >= 1 || prefLesson <=3)
+	    		this.prefLesson = prefLesson;
+	    	else 
+	    		this.prefLesson = 1;
 	    }
 
 	    public int getUserID() {

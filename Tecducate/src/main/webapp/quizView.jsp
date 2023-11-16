@@ -61,19 +61,19 @@
 
       <!--Each answer block has their own unique text entry-->
       <section id="answer1" class="answerBlock">
-        <a href="result"><h2>${quiz.ansr1}</h2></a>
+        <a href="result?ansr=<c:out value='${quiz.ansr1}' />"><h2>${quiz.ansr1}</h2></a>
       </section>
 
       <section id="answer2" class="answerBlock">
-        <a href="result"><h2>${quiz.ansr4}</h2></a>
+       <a href="result?ansr=<c:out value='${quiz.ansr2}' />"><h2>${quiz.ansr2}</h2></a>
       </section>
 
       <section id="answer3" class="answerBlock">
-        <a href="result"><h2>${quiz.ansr3}</h2></a>
+        <a href="result?ansr=<c:out value='${quiz.ansr3}' />"><h2>${quiz.ansr3}</h2></a>
       </section>
 
       <section id="answer4" class="answerBlock">
-        <a href="result"><h2>${quiz.ansr2}</h2></a>
+        <a href="result?ansr=<c:out value='${quiz.ansr4}' />"><h2>${quiz.ansr4}</h2></a>
       </section>
     </div>
   
