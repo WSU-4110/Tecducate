@@ -68,6 +68,12 @@ class userTest {
 		assertEquals ("Smith", testUser.getLastName());
 		// fail("Not yet implemented");
 	}*/
+	
+	/*@Test
+	void testGetLastName() {
+		assertEquals ("Smith", testUser.getLastName());
+		// fail("Not yet implemented");
+	}*/
 
 	
 	@Test
@@ -87,5 +93,6 @@ class userTest {
         assertEquals(0, testUser.getPrefLesson());
 		//fail("Not yet implemented");
 	}
+	
 	
 }
