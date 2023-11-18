@@ -124,12 +124,21 @@ public class ControlServlet extends HttpServlet {
 	    	System.out.println(currentUser);
 	    	int profLVL = userDAO.getLVL(currentUser);
 	    	quiz quiz = quizDAO.getQuiz(lessonID, profLVL);
+	    	session.setAttribute("quizID", quiz.getQuizID());
 	    	request.setAttribute("quiz", quiz);
 	    	request.getRequestDispatcher("quizView.jsp").forward(request, response);
 	    }
 	    
 	    private void resultPage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException{
 	    	System.out.println("Result View");
+	    	String ansrChoice = request.getParameter("ansr");
+	    	int quizID = (Integer) (session.getAttribute("quizID"));
+	    	String correctChoice = quizDAO.getCorrectAnsr(quizID);
+	    	if (ansrChoice.equalsIgnoreCase(correctChoice)) {
+	    		request.setAttribute("result", "Passed");
+	    	} else {
+	    		request.setAttribute("result", "Failed");
+	    	}
 	    	request.getRequestDispatcher("resultView.jsp").forward(request, response);
 	    }
 	   
@@ -166,10 +175,13 @@ public class ControlServlet extends HttpServlet {
 	   	 	String confirm = request.getParameter("confirmation");
 	   	 	System.out.println(confirm);
 	   	 	
+	   	 	int prefLesson = Integer.parseInt(request.getParameter("topic"));
+	   	 	System.out.println("Topic " + prefLesson);
+	   	 	
 	   	 	if (password.equals(confirm)) {
 	   	 		if (!userDAO.checkEmail(email)) {
 		   	 		System.out.println("Registration Successful! Added to database");
-		            user users = new user(email,firstName, lastName, password, phoneNumber);
+		            user users = new user(email,firstName, lastName, password, phoneNumber, prefLesson);
 		   	 		userDAO.insert(users);
 		   	 		response.sendRedirect("login.jsp");
 	   	 		}
