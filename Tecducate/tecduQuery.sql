@@ -3,8 +3,8 @@ create database webDB;
 use webDB;
 CREATE TABLE if not exists User(
 	email VARCHAR(50) NOT NULL, 
-	firstName VARCHAR(10) NOT NULL, 
-	lastName VARCHAR(10) NOT NULL, 
+	firstName VARCHAR(20) NOT NULL, 
+	lastName VARCHAR(20) NOT NULL, 
 	password VARCHAR(20) NOT NULL, 
     phoneNumber varchar(20) NOT NULL Default '0',
     prefLesson int not null default 0,

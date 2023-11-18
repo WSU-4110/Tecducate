@@ -175,10 +175,13 @@ public class ControlServlet extends HttpServlet {
 	   	 	String confirm = request.getParameter("confirmation");
 	   	 	System.out.println(confirm);
 	   	 	
+	   	 	int prefLesson = Integer.parseInt(request.getParameter("topic"));
+	   	 	System.out.println("Topic " + prefLesson);
+	   	 	
 	   	 	if (password.equals(confirm)) {
 	   	 		if (!userDAO.checkEmail(email)) {
 		   	 		System.out.println("Registration Successful! Added to database");
-		            user users = new user(email,firstName, lastName, password, phoneNumber);
+		            user users = new user(email,firstName, lastName, password, phoneNumber, prefLesson);
 		   	 		userDAO.insert(users);
 		   	 		response.sendRedirect("login.jsp");
 	   	 		}
