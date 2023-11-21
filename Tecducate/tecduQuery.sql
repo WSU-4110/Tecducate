@@ -18,7 +18,7 @@ insert into User(email, firstName, lastName, password, profLVL, prefLesson)
 values ('susie@gmail.com', 'Susie ', 'Guzman', 'susie1234', 1, 100),
 		('test', 'test', 'test', 't1234', 2, 101),
 		('root', 'default', 'default','pass1234', 3, 102);
-select * from User;  
+
 
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -49,7 +49,7 @@ values ('Beginner Question',100, 1),
 		('Advanced Question',102, 2),
         ('Expert Question',102, 3);
 SET FOREIGN_KEY_CHECKS=1;
-select * from Quiz;
+
 
 
 create table if not exists Lesson(
@@ -64,7 +64,7 @@ insert into Lesson()
 values (),
 		(),
         ();
-select * from Lesson;
+
 
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -82,6 +82,13 @@ values (10),
 		(14),
         (17);
 SET FOREIGN_KEY_CHECKS=1;
-select * from Result;
+
 
 SELECT * FROM Quiz WHERE lessonID = 100 and LVL = 2; 
+
+update User set profLVL=2 where userID = 500;
+
+select * from User;  
+select * from Quiz;
+select * from Result;
+select * from Lesson;
