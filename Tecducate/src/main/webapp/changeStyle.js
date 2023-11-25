@@ -1,4 +1,4 @@
-/* This function will run every time the style button is clicked. */
+/* This function will run every time the 'style' button is clicked. */
 
 function toggleStyles() {
   const body = document.querySelector("body")
