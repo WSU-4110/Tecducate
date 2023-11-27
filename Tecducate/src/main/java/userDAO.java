@@ -215,15 +215,13 @@ public class userDAO
     		
     		currentLVL++;
     		System.out.println("NEW LEVEL: " + currentLVL);
-    		String sql = "update User set profLVL = ? where userID = ?;";
+    		String sql = "update User set profLVL = " + currentLVL + " where userID = " + uID;
             connect_func();
+            statement =  (Statement) connect.createStatement();
             
-            preparedStatement = (PreparedStatement) connect.prepareStatement(sql);
-            preparedStatement.setInt(1, uID);
-            preparedStatement.setInt(2, currentLVL);
+            statement.execute(sql);   
             
-    		preparedStatement.executeUpdate();
-            preparedStatement.close();
+            disconnect();
             
     	}
     	
