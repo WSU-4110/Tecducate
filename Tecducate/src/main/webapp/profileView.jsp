@@ -17,28 +17,19 @@
         <a href="#" id="settings-icon"><i class="fas fa-cog"></i> Settings</a>
     </header>
 
-    <section class="user-info-box">
-    <h2>User Information</h2>
-    <%
-        user user = (user) request.getAttribute("user");
-        if (user != null) {
-    %>
-        <p><strong>Name:</strong> <%= user.getFirstName() + " " + user.getLastName() %></p>
-        <p><strong>Email:</strong> <%= user.getEmail() %></p>
-        <p><strong>Phone Number:</strong> <%= user.getPhoneNum() %></p>
-    <%
-        } else {
-    %>
-        <p>No user data found.</p>
-    <%
-        }
-    %>
+<section class="user-info-box">
+	<h2>User Information</h2>
+   
+    <p><strong>Name:</strong> ${user.firstName} ${user.lastName}</p>
+    <p><strong>Email:</strong> ${user.email}</p>
+    <p><strong>Phone Number:</strong> ${user.phoneNum}</p>
+   
 </section>
 
 
     <section class="lessons-box">
         <h2>Your Lessons</h2>
-        <p><strong>Lesson:</strong> Phishing Email</p>
+        <p><strong>Lesson ID:</strong> ${user.prefLesson}</p>
         <button id="go-to-lesson-button"><i class="fas fa-graduation-cap"></i> Go to lesson</button>
     </section>
 
