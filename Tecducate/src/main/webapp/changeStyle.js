@@ -12,3 +12,4 @@ function toggleStyles() {
     changeStyleButton.innerText = "Style"
   }
 }
+
