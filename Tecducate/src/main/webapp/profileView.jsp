@@ -18,11 +18,23 @@
     </header>
 
     <section class="user-info-box">
-        <h2>User Information</h2>
-        <p><strong>Name:</strong> Mohammad Azadegan</p>
-        <p><strong>Email:</strong> testing123@example.com</p>
-        <p><strong>Phone Number:</strong> (123) 456-7890</p>
-    </section>
+    <h2>User Information</h2>
+    <%
+        user user = (user) request.getAttribute("user");
+        if (user != null) {
+    %>
+        <p><strong>Name:</strong> <%= user.getFirstName() + " " + user.getLastName() %></p>
+        <p><strong>Email:</strong> <%= user.getEmail() %></p>
+        <p><strong>Phone Number:</strong> <%= user.getPhoneNum() %></p>
+    <%
+        } else {
+    %>
+        <p>No user data found.</p>
+    <%
+        }
+    %>
+</section>
+
 
     <section class="lessons-box">
         <h2>Your Lessons</h2>

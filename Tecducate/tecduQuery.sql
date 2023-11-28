@@ -8,7 +8,7 @@ CREATE TABLE if not exists User(
 	password VARCHAR(20) NOT NULL, 
     phoneNumber varchar(20) NOT NULL Default '0',
     prefLesson int not null default 0,
-    profLVL int not null default 0,
+    profLVL int not null default 1,
 	userID INT(10) NOT NULL auto_increment,
 	PRIMARY KEY (userID)
 ); 
