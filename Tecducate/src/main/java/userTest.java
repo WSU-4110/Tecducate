@@ -35,12 +35,6 @@ class userTest {
 		//fail("Not yet implemented");
 	}
 
-	/*@Test
-	void testGetEmail() {
-        assertEquals("newemail@test.com", testUser.getEmail());
-		//fail("Not yet implemented");
-	}*/
-
 
 	@Test
 	void testSetFirstName() {
@@ -49,31 +43,12 @@ class userTest {
 		//fail("Not yet implemented");
 	}
 
-	/*@Test
-	void testGetFirstName() {
-        assertEquals("John", testUser.getFirstName());
-		//fail("Not yet implemented");
-	}*/
-
-
 	@Test
 	void testSetLastName() {
 		testUser.setLastName("Smith");
         assertEquals("Smith", testUser.getLastName());
         //fail("Not yet implemented");
 	}
-
-	/*@Test
-	void testGetLastName() {
-		assertEquals ("Smith", testUser.getLastName());
-		// fail("Not yet implemented");
-	}*/
-	
-	/*@Test
-	void testGetLastName() {
-		assertEquals ("Smith", testUser.getLastName());
-		// fail("Not yet implemented");
-	}*/
 
 	
 	@Test

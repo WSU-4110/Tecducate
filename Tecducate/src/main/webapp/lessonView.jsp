@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="http://localhost:8080/Tecducate/src/main/webapp/style/lessonPage.css" type="text/css">
+  <link rel="stylesheet" href="http://localhost:8080/Tecducate/style/lessonPage.css" type="text/css">
   <link rel="stylesheet" href="http://localhost:8080/Tecducate/style/lessonPageStyle.css" type="text/css">
 
 </head>
@@ -49,10 +49,15 @@
 		      
 		      <button class="navbar__btn" id="change-style-button" onclick="toggleStyles()">Style</button>
 		      
-		      <form class="d-flex" role="search">
-		        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-		        <button class="btn btn-outline-success" type="submit">Search</button>
-		      </form>
+		      <div id="searchBox">
+		      		<input type="text" id="input" placeholder="Search" />
+		      		<input type="button" id="searchBtn" value="Search" onclick="search();" />	
+		      
+		      </div>
+<!-- 		      <form class="d-flex" role="search"> -->
+<!-- 		        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+<!-- 		        <button class="btn btn-outline-success" type="submit">Search</button> -->
+<!-- 		      </form> -->
 <!-- for search.java -->
 <!-- 		      <form class="d-flex" role="search" action="SearchServlet" method="post"> -->
 <!--     			<input class="form-control me-2" type="search" name="searchInput" placeholder="Search" aria-label="Search"> -->
@@ -100,13 +105,13 @@
               </h4>
             </div>
             <div id="collapse1" class="panel-collapse collapse">
-              <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+              <div class="panel-body"> <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit,
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
             </div>
           </div>
           <div class="panel panel-default">
@@ -116,11 +121,11 @@
               </h4>
             </div>
             <div id="collapse2" class="panel-collapse collapse">
-              <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+              <div class="panel-body"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
               <img width="100px" height="80" src="assets/Phishing-email-graphic-scaled.jpg"> 
 
             </div>
@@ -132,7 +137,7 @@
               </h4>
             </div>
             <div id="collapse3" class="panel-collapse collapse">
-              <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+              <div class="panel-body"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -142,7 +147,7 @@
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
             </div>
           </div>
         </div> 
