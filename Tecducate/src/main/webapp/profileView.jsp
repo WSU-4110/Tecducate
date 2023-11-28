@@ -38,10 +38,20 @@
     <section class="quiz-scores">
         <h2>Leaderboard</h2>
         <ol>
-            <li>Player 1 - Score: 95%</li>
-            <li>Player 2 - Score: 92%</li>
-            <li>Player 3 - Score: 88%</li>
+        	<c:forEach var="users" items="${userList}">
+            <li><c:out value="${users.email}" /> - <c:out value="${users.profLVL}" /></li>
+            <br>
+            </c:forEach>
         </ol>
+    </section>
+    
+    
+    <section class="lesson-recomendations">
+        <h2>Try These Other Lessons</h2>
+        <ul>
+            <li><a href="lesson?id=101">Account Management</a></li>
+            <li><a href="lesson?id=102">Virus Identification</a></li>
+        </ul>
     </section>
 
 

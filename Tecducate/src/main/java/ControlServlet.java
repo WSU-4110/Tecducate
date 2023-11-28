@@ -73,11 +73,6 @@ public class ControlServlet extends HttpServlet {
         	case "/logout":
         		logout(request,response);
         		break;
-        	
-        	 case "/listUser": 
-                 System.out.println("The action is: listUser");
-                 listUser(request, response);           	
-                 break;
         	 case "/update": 
                  System.out.println("The action is: Update");
                  update(request, response);           	
@@ -88,26 +83,12 @@ public class ControlServlet extends HttpServlet {
         	System.out.println(ex.getMessage());
 	    	}
 	    }
-        	
-	    private void listUser(HttpServletRequest request, HttpServletResponse response)
-	            throws SQLException, IOException, ServletException {
-	        System.out.println("listUser started: 00000000000000000000000000000000000");
-	        List<user> listUser = userDAO.listAllUsers();
-	        request.setAttribute("listUser", listUser);       
-	        RequestDispatcher dispatcher = request.getRequestDispatcher("UserList.jsp");       
-	        dispatcher.forward(request, response);
-	     
-	        System.out.println("listPeople finished: 111111111111111111111111111111111111");
-	    }
 	    
-	    
-	    private void userPage(HttpServletRequest request, HttpServletResponse response, String view) throws ServletException, IOException, SQLException{
-	    	System.out.println("profile View");
-	    	request.getRequestDispatcher("profileView.jsp").forward(request, response);
-	    }
 	    
 	    private void userPage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException{
 	    	System.out.println("profile View");
+	    	List <user> userList = userDAO.listAllUsers();
+	    	request.setAttribute("userList", userList);
 	    	request.getRequestDispatcher("profileView.jsp").forward(request, response);
 	    }
 	    
@@ -115,6 +96,7 @@ public class ControlServlet extends HttpServlet {
 	    	System.out.println("Lesson View");
 	    	request.getRequestDispatcher("lessonView.jsp").forward(request, response);
 	    }
+	    
 	    
 	    
 	    private void quizPage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException{
@@ -159,7 +141,7 @@ public class ControlServlet extends HttpServlet {
 			 	currentUser = email;
 			 	session = request.getSession();
 				session.setAttribute("username", email);
-				userPage(request, response, "");
+				userPage(request, response);
 			 			 			 			 
 	    	 }
 	    	 else {
