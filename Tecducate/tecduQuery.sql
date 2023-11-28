@@ -3,21 +3,21 @@ create database webDB;
 use webDB;
 CREATE TABLE if not exists User(
 	email VARCHAR(50) NOT NULL, 
-	firstName VARCHAR(10) NOT NULL, 
-	lastName VARCHAR(10) NOT NULL, 
+	firstName VARCHAR(20) NOT NULL, 
+	lastName VARCHAR(20) NOT NULL, 
 	password VARCHAR(20) NOT NULL, 
     phoneNumber varchar(20) NOT NULL Default '0',
     prefLesson int not null default 0,
-    profLVL int not null default 0,
+    profLVL int not null default 1,
 	userID INT(10) NOT NULL auto_increment,
 	PRIMARY KEY (userID)
 ); 
 alter table user auto_increment = 500;
     
-insert into User(email, firstName, lastName, password, profLVL)
-values ('susie@gmail.com', 'Susie ', 'Guzman', 'susie1234', 1),
-		('test', 'test', 'test', 't1234', 2),
-		('root', 'default', 'default','pass1234', 3);
+insert into User(email, firstName, lastName, password, profLVL, prefLesson)
+values ('susie@gmail.com', 'Susie ', 'Guzman', 'susie1234', 1, 100),
+		('test', 'test', 'test', 't1234', 2, 101),
+		('root', 'default', 'default','pass1234', 3, 102);
 select * from User;  
 
 
@@ -27,11 +27,12 @@ create table if not exists Quiz(
     lessonID int not null default 0,
     LVL int not null,
     directions varchar (150) not null default 'Click The Correct Answer',
-    question varchar (100) not null default 'Question Not Loaded',
+    question varchar (150) not null default 'Question Not Loaded',
     ansr1 varchar (50) not null default 'A',
     ansr2 varchar (50) not null default 'B',
     ansr3 varchar (50) not null default 'C',
     ansr4 varchar (50) not null default 'D',
+    correctAnsr varchar(50) not null default 'A',
     primary key(quizID),
     foreign key(lessonID) references Lesson(lessonID)
 );

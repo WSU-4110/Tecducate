@@ -43,10 +43,10 @@
 
     <!--Dedicated section for results-->
     <div id="resultsSection" class="infoBlock">
-      <h1>Congratulations!</h1>
-      <h2>You Got...</h2>
-      <h1>100%</h1>
-      <h2>That's a new score!</h2>
+      <h2>You...</h2>
+      <h2>${result}</h2>
+      <h2>This Test</h2>
+      
     </div>
 
       <!--Return button to go to profile page-->
