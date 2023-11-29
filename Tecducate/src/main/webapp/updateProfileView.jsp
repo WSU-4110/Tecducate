@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     
 <!DOCTYPE html lang="en" >
 <html>
@@ -20,13 +21,13 @@
             <fieldset>             
                 <ul class="Personal-Infomation">
                     <li>
-                    	<label for="email">Email address<br></label>
-                    	<input type="text" name="email" id="email" value="" disabled></li><br>
-                    <li><label for ="firstlast">First name<br></label><input type="text" name="firstName" id="first" value=""></li><br>
-                    <li><label for="last">First name<br></label><input type="text" name="lastName" id="last" value=""></li><br>
-                    <li><label for="password">Password<br></label><input type="text" id="password-input" name="password-input" value="..................." disabled></li><br>
+                    	<label for="email">Email<br></label>
+                    	<input type="text" name="email" id="email" value="${user.email}" disabled></li><br>
+                    <li><label for ="firstlast">First Name<br></label><input type="text" name="firstName" id="firstName" value="${user.firstName}"></li><br>
+                    <li><label for="last">Last Name<br></label><input type="text" name="lastName" id="lastName" value="${user.lastName}"></li><br>
                     <small><input class= "ChangePass-Button"  onclick="myFunction()" type="button" value="Change Password"> </small>
-                    <input id="NewPassword" type="text" value="New Password" style="display: none;" >
+                    <input id="NewPassword" type="text" value="New Password" style="display: none;" ><br>
+                    <input id="confirmation" type = "text" value = "Confirm Password" style="display: none">
                 </ul>	
                 	
             </fieldset>
@@ -36,7 +37,9 @@
             <script>
                 function myFunction() {
                     var newPasswordInput = document.getElementById("NewPassword");
-                    newPasswordInput.style.display = "block"; // Display the new password input
+                    newPasswordInput.style.display = "block"; // Display the new password 
+                    var confrimationInput = document.getElementById("confirmation");
+                    confrimationInput.style.display = "block";
                 }
                 </script>
     </body>
