@@ -21,10 +21,10 @@
 
 <section class="user-info-box">
 	<h2>User Information</h2>
-   
-    <p><strong>Name:</strong> ${user.firstName} ${user.lastName}</p>
-    <p><strong>Email:</strong> ${user.email}</p>
-    <p><strong>Phone Number:</strong> ${user.phoneNum}</p>
+    
+    <p><strong>Name:</strong> ${user.firstName || 'n/a'} ${user.lastName || 'n/a'}</p>
+    <p><strong>Email:</strong> ${user.email || 'n/a'}</p>
+    <p><strong>Phone Number:</strong> ${user.phoneNum || 'n/a'}</p>
    
 </section>
 
