@@ -18,8 +18,8 @@
         <h2>Edit User Information</h2>
         <div class="button-container">
             <button id="update-profile-button"><i class="fas fa-user-edit"></i> Update Profile</button>
-    <button id="delete-profile-button"><i class="fas fa-user-times"></i> Delete Profile</button>
-    <button id="reset-lesson-plan-button"><i class="fas fa-undo"></i> Reset Lesson Plan</button>
+            <button id="delete-profile-button"><i class="fas fa-user-times"></i> Delete Profile</button>
+            <button id="reset-lesson-plan-button"><i class="fas fa-undo"></i> Reset Lesson Plan</button>
         </div>
     </section>
 
@@ -36,24 +36,10 @@
         });
 
         document.getElementById("update-profile-button").addEventListener("click", function () {
-            window.location.href = "updateProfileView.jsp";
-        });
-        document.getElementById("delete-profile-button").addEventListener("click", function () {
-            var confirmation = confirm("Are you sure you want to delete your profile?");
-            if (confirmation) {
-                var xhr = new XMLHttpRequest();
-                xhr.open("POST", "userDAO", true);
-                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState === 4 && xhr.status === 200) {
-                        console.log(xhr.responseText);
-                        window.location.href = "settingsView.jsp";
-                    }
-                };
-                xhr.send("action=deleteProfile");
-            }
-        });
-
+            window.location.href = "updateView?";
+        })
+       // send a request to the servlet to be able to display info in update page
     </script>
 </body>
 </html>
+

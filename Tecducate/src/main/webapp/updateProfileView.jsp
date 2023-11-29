@@ -19,6 +19,7 @@
                 
             <fieldset>             
                 <ul class="Personal-Infomation">
+                    <li>
                     	<label for="email">Email address<br></label>
                     	<input type="text" name="email" id="email" value="" disabled></li><br>
                     <li><label for ="firstlast">First name<br></label><input type="text" name="firstName" id="first" value=""></li><br>

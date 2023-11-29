@@ -20,17 +20,17 @@
 <!--Sign Up from-->
     <body>
 
-         <form action = "register"> <!--Send From information via email-->
+         <form action = "register" method="post"> <!--Send From information -->
 
                 
             <filedset>             
                 <ul class="Personal-Infomation">
-                    <li><label for ="firstName">First Name<br></label><input type="text" name="firstName""></li><br>
-                    <li><label for ="lastName">Last Name<br></label><input type="text" name="lastName"></li><br>
-                    <li><label for="email">Email<br></label><input type="text" name="email"></li><br>
-                    <li><label for="number">Telephone Number<br></label><input type="text" name="number"></li><br>
-                    <li><label for="password">Password<br></label><input type="password" name="password"></li><br>
-                    <li><label for="confirmation">Confirm Password<br></label><input type="password" name="confirmation"></li><br>
+                    <li><label for ="firstName">First Name<br></label><input type="text" name="firstName" maxlength="20"></li><br>
+                    <li><label for ="lastName">Last Name<br></label><input type="text" name="lastName" maxlength="20"></li><br>
+                    <li><label for="email">Email<br></label><input type="text" name="email" maxlength="50"></li><br>
+                    <li><label for="number">Telephone Number<br></label><input type="text" name="number" maxlength="11"></li><br>
+                    <li><label for="password">Password<br></label><input type="password" name="password" maxlength="20"></li><br>
+                    <li><label for="confirmation">Confirm Password<br></label><input type="password" name="confirmation" maxlength="20"></li><br>
                 </ul>	
                 	
             </filedset>
@@ -39,9 +39,9 @@
             
                 <ul class="Prefferences">
                     <Legand >Choose what you would like to start learning<em>(Choose one or more)</em></legand>
-                <li><label><input type="checkbox" name="Topic" value="Phishing-email" checked>Identify Phishing Emails</label></li>
-                <li><label><input type="checkbox" name="Topic" value="Phishing-links">Identify Phishing links</label></li>
-                <li><label><input type="checkbox" name="Topic" value="Account-management">How to manage my account</label></li>
+                <li><label><input type="radio" name="topic" value="100" checked>Identify Phishing Emails</label></li>
+                <li><label><input type="radio" name="topic" value="101">Identify Phishing links</label></li>
+                <li><label><input type="radio" name="topic" value="102">How to manage my account</label></li>
                 </ul>
         </filedset>
         <!--Submit and Reset Button-->

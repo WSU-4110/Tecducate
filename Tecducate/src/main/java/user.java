@@ -1,4 +1,6 @@
 import java.math.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class user 
 {
@@ -10,10 +12,12 @@ public class user
 	    protected int prefLesson;
 	    protected int profLVL;
 	    protected int userID;
+	    private List<LessonDecorator> lessons;
 
 	 
 	    //constructors
 	    public user() {
+	    	this.lessons = new ArrayList<>();
 	    }
 	 
 	    public user(String email) 
@@ -41,7 +45,7 @@ public class user
 	    
 	    public user(String email,String firstName, String lastName, String password, String phoneNum, int prefLesson) 
 	    {
-	    	this(firstName,lastName,password, prefLesson, 0, 0);
+	    	this(firstName,lastName,password, prefLesson, 1, 0);
 	    	setEmail(email);
 	    	setPhoneNum(phoneNum);
 	    }
@@ -99,7 +103,20 @@ public class user
 	        return prefLesson;
 	    }
 	    public void setPrefLesson(int prefLesson) {
-	        this.prefLesson = prefLesson;
+	    	if (prefLesson >= 1 || prefLesson <=3)
+	    		this.prefLesson = prefLesson;
+	    	else 
+	    		this.prefLesson = 1;
+	    	
+	    }
+	    // for lesson decorator design pattern
+	    public void addLesson(Lesson lesson) {
+	        // Wrap the lesson with a decorator
+	        LessonDecorator lessonWithLink = new LessonWithLinkDecorator(lesson);
+	        lessons.add(lessonWithLink);
+	    }
+	    public List<LessonDecorator> getLessons() {
+	        return lessons;
 	    }
 
 	    public int getUserID() {
@@ -108,5 +125,6 @@ public class user
 	    public void setUserID(int userID) {
 	        this.userID = userID;
 	    }
+	    
 	    
 }
