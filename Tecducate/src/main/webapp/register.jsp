@@ -20,7 +20,7 @@
 <!--Sign Up from-->
     <body>
 
-         <form action = "register"> <!--Send From information via email-->
+         <form action = "register" method="post"> <!--Send From information -->
 
                 
             <filedset>             
@@ -28,7 +28,7 @@
                     <li><label for ="firstName">First Name<br></label><input type="text" name="firstName" maxlength="20"></li><br>
                     <li><label for ="lastName">Last Name<br></label><input type="text" name="lastName" maxlength="20"></li><br>
                     <li><label for="email">Email<br></label><input type="text" name="email" maxlength="50"></li><br>
-                    <li><label for="number">Telephone Number<br></label><input type="text" name="number" maxlength="10"></li><br>
+                    <li><label for="number">Telephone Number<br></label><input type="text" name="number" maxlength="11"></li><br>
                     <li><label for="password">Password<br></label><input type="password" name="password" maxlength="20"></li><br>
                     <li><label for="confirmation">Confirm Password<br></label><input type="password" name="confirmation" maxlength="20"></li><br>
                 </ul>	

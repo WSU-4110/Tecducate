@@ -36,8 +36,9 @@
         });
 
         document.getElementById("update-profile-button").addEventListener("click", function () {
-            window.location.href = "updateProfileView.jsp";
-        });
+            window.location.href = "updateView?";
+        })
+       // send a request to the servlet to be able to display info in update page
     </script>
 </body>
 </html>
