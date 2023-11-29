@@ -29,6 +29,28 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+.backButton{
+	margin: 1em;
+    border-radius: 5%;
+    border-color: black;
+    background-color: rgba(126, 208, 231, 0.962);
+    box-shadow:0 0 10px #235ca6;
+    font-size: larger;
+    width: 95%;
+    height: 4.2%;
+    min-height: 20px;
+}
+.Update-Button{
+	margin: 1em;
+    border-radius: 5%;
+    border-color: black;
+    background-color: rgba(126, 208, 231, 0.962);
+    box-shadow:0 0 10px #235ca6;
+    font-size: larger;
+    width: 95%;
+    height: 4.2%;
+    min-height: 20px;
+}
 
  form{
     text-align: left;
