@@ -83,7 +83,7 @@ public class userDAO
     
     public List<user> listAllUsers() throws SQLException {
         List<user> listUser = new ArrayList<user>();        
-        String sql = "SELECT * FROM User";      
+        String sql = "SELECT * FROM User ORDER BY profLVL DESC";      
         connect_func();      
         statement = (Statement) connect.createStatement();
         ResultSet resultSet = statement.executeQuery(sql);
