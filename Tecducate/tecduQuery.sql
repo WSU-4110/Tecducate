@@ -63,7 +63,6 @@ alter table lesson auto_increment = 100;
 insert into Lesson(details,sample)
 values ('PhishingEmail', 'The fake invoice scam, Email account upgrade scam, Google Docs scam, PayPal Scam'),
     ('PhishingLinks', 'http://101.10.1.101'),
-    ('AccountManagement', 'Use long password combinations, Combine numbers, lowercase, and uppercase letters');
 
 SET FOREIGN_KEY_CHECKS=0;
 create table Result(
