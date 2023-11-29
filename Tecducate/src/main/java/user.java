@@ -12,17 +12,18 @@ public class user
 	    protected int prefLesson;
 	    protected int profLVL;
 	    protected int userID;
-	    private List<LessonDecorator> lessons;
 
 	 
 	    //constructors
-	    public user() {
-	    	this.lessons = new ArrayList<>();
-	    }
 	 
 	    public user(String email) 
 	    {
 	        this.email = email;
+	    }
+	    
+	    public user() 
+	    {
+	    	
 	    }
 
 	    
@@ -108,15 +109,6 @@ public class user
 	    	else 
 	    		this.prefLesson = 1;
 	    	
-	    }
-	    // for lesson decorator design pattern
-	    public void addLesson(Lesson lesson) {
-	        // Wrap the lesson with a decorator
-	        LessonDecorator lessonWithLink = new LessonWithLinkDecorator(lesson);
-	        lessons.add(lessonWithLink);
-	    }
-	    public List<LessonDecorator> getLessons() {
-	        return lessons;
 	    }
 
 	    public int getUserID() {
