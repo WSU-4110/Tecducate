@@ -55,11 +55,11 @@
     </header>
 
     <div class="container">
-        <h1>Phishing Emails</h1>
+        <h1>Phishing Links</h1>
         <div class="container text-center">
   <div class="row">
     <div class="col-12 col-md-6 col-lg-6 ">
-       <img class="image" src="asset/Phishing-email-graphic-scaled.jpg" style="max-width: 90%"> 
+       <img class="image" src="asset/phishing emails.png" style="max-width: 100%"> 
 
     </div>
     <div class="col-12 col-md-6 col-lg-6">
@@ -82,7 +82,7 @@
           <div class="panel panel-default">
             <div class="panel-heading">
               <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">How Do You Identify a Phishing Email?</a>
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">How Do You Identify a Phishing Link?</a>
               </h4>
             </div>
             <div id="collapse1" class="panel-collapse collapse">

@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,11 +29,14 @@
 </section>
 
 
+
     <section class="lessons-box">
+
         <h2>Your Lessons</h2>
         <p><strong>Lesson ID:</strong> ${user.prefLesson}</p>
         <button id="go-to-lesson-button"><i class="fas fa-graduation-cap"></i> Go to lesson</button>
     </section>
+
 
     <section class="quiz-scores">
         <h2>Leaderboard</h2>
@@ -41,6 +46,7 @@
             <li>Player 3 - Score: 88%</li>
         </ol>
     </section>
+
 
     <footer>
         <p>&copy; 2023 Tecducate</p>
