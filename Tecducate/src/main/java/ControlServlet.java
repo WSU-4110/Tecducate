@@ -93,8 +93,10 @@ public class ControlServlet extends HttpServlet {
 	    private void userPage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException{
 	    	System.out.println("profile View");
 	    	String email = (String)session.getAttribute("username");
-		user user =userDAO.getUser(email);
+	    	user user = userDAO.getUser(email);
 	    	request.setAttribute("user", user);
+	    	List<user> userList = userDAO.listAllUsers();
+	    	request.setAttribute("userList", userList);
 	        RequestDispatcher dispatcher = request.getRequestDispatcher("profileView.jsp");
 	        dispatcher.forward(request, response);
 	    }
