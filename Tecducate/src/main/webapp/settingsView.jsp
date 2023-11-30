@@ -42,7 +42,7 @@
     </footer>
     <script>
         document.getElementById("back-to-profile-button").addEventListener("click", function () {
-            window.location.href = "profileView.jsp";
+            window.location.href = "profile";
         });
 
         document.getElementById("update-profile-button").addEventListener("click", function () {
