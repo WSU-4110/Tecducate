@@ -25,6 +25,7 @@ public class ControlServlet extends HttpServlet {
 	    private quizDAO quizDAO = new quizDAO();
 	    private String currentUser;
 	    private HttpSession session=null;
+		private String NULL;
 	    
 	    public ControlServlet()
 	    {
@@ -81,6 +82,10 @@ public class ControlServlet extends HttpServlet {
         		 System.out.println("The action is : UpdateView");
         		 updateView(request, response);
         		 break;
+        	 case "/delete":
+        		 System.out.println("The action is : UpdateView");
+        		 deleteProfile(request,response);
+        		 break;
 	    	}
 	    }
 	    catch(Exception ex) {
@@ -88,13 +93,43 @@ public class ControlServlet extends HttpServlet {
 	    	}
 	    }
 	    
-	    
+	    private void deleteProfile(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException{
+	    	String email = (String)session.getAttribute("username");
+	    	userDAO.delete(email);
+	    	
+	    	request.getRequestDispatcher("login.jsp").forward(request, response);
+	    }
 
 	    private void userPage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException{
 	    	System.out.println("profile View");
 	    	String email = (String)session.getAttribute("username");
 	    	user user = userDAO.getUser(email);
+	    	
+	    	String firstName = user.getFirstName();
+	    	String lastName = user.getLastName();
+	    	String phoneNum = user.getPhoneNum();
+	 
+	    	if (firstName == null){
+	    			firstName = "n/a";
+	    	}
+	    	
+	    	if (lastName == null){
+    			lastName = "n/a";
+	    	}
+	    	
+	    	if (email == null){
+    			email = "n/a";
+    	}
+	    	
+	    	if (phoneNum == null){
+    			phoneNum = "n/a";
+	    	}
+	    		    	
 	    	request.setAttribute("user", user);
+	    	request.setAttribute("firstName", firstName);
+	    	request.setAttribute("lastName", lastName);
+	    	request.setAttribute("email", email);
+	    	request.setAttribute("phoneNum", phoneNum);
 	    	List<user> userList = userDAO.listAllUsers();
 	    	request.setAttribute("userList", userList);
 	        RequestDispatcher dispatcher = request.getRequestDispatcher("profileView.jsp");

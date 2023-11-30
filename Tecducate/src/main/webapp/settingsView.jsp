@@ -16,11 +16,21 @@
 
     <section id="user-settings">
         <h2>Edit User Information</h2>
+        
+        <form action = "delete" method ="post">
+        
+       
         <div class="button-container">
+        
+        
             <button id="update-profile-button"><i class="fas fa-user-edit"></i> Update Profile</button>
-            <button id="delete-profile-button"><i class="fas fa-user-times"></i> Delete Profile</button>
+            <button id="delete-profile-button" type = "submit"><i class="fas fa-user-times"></i> Delete Profile</button>
             <button id="reset-lesson-plan-button"><i class="fas fa-undo"></i> Reset Lesson Plan</button>
         </div>
+        <script>
+
+</script>
+        </form>
     </section>
 
     <div class="button-group">
@@ -36,10 +46,11 @@
         });
 
         document.getElementById("update-profile-button").addEventListener("click", function () {
-            window.location.href = "updateView?";
+            window.location.href = "updateProfileView.jsp";
         })
-       // send a request to the servlet to be able to display info in update page
+        
     </script>
+
 </body>
 </html>
 
