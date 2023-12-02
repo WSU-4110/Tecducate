@@ -88,14 +88,37 @@ public class LessonDAO
         }
     }
     
-    public void addLesson(Lesson lesson) {
-        Lesson.setLessonID(lesson.getLessonID(), Lesson);
+    public void indexandgetLesson(Lesson lesson) {
+    	
+    	String correctLesson = "";
+    	
+    	String sql = "SELECT * FROM Lesson WHERE LessonID = ?;";
+        	
+    	connect_func();
+        
+        preparedStatement = (PreparedStatement) connect.prepareStatement(sql);
+        preparedStatement.setInt(1, lessonID);
+        
+        
+        ResultSet resultSet = preparedStatement.executeQuery();
+        
+        if (resultSet.next()) {
+            int lessonID = resultSet.getInt("LessonID");
+            String details = resultSet.getString("details");
+            String sample = resultSet.getString("sample");
+            Lesson = new Lesson(lessonID, details, sample);          
+            
+        }
+         
+        System.out.println(Lesson.getLessonID() + " " + Lesson.getDetails() + " " + Lesson.getSample);
+        
+        resultSet.close();
+        preparedStatement.close();
+         
+        return Lesson;     
+        
     }
-
-    public Lesson getLessonID(int lessonID) {
-        return Lesson.getLessonID(lessonID);
-    }
-
-    public void updateLesson(Lesson lesson) {
-        Lesson.setLessonID(Lesson.getLessonID(), lesson);
-    }
+   
+    /*
+    INDEX AND PULL OUT
+    */

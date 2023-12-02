@@ -23,6 +23,7 @@ public class ControlServlet extends HttpServlet {
 	    private static final long serialVersionUID = 1L;
 	    private userDAO userDAO = new userDAO();
 	    private quizDAO quizDAO = new quizDAO();
+	    private LessonDAO LessonDAO = new LessonDAO();
 	    private String currentUser;
 	    private HttpSession session=null;
 	    
@@ -35,6 +36,7 @@ public class ControlServlet extends HttpServlet {
 	    {
 	    	userDAO = new userDAO();
 	    	quizDAO = new quizDAO();
+	    	LessonDAO = new LessonDAO();
 	    	currentUser= "";
 	    }
 	    
