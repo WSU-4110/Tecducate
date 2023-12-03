@@ -25,7 +25,7 @@
                     	<input type="text" name="email" id="email" value="${user.email}" disabled></li><br>
                     <li><label for ="firstlast">First Name<br></label><input type="text" name="firstName" id="firstName" value="${user.firstName}"></li><br>
                     <li><label for="last">Last Name<br></label><input type="text" name="lastName" id="lastName" value="${user.lastName}"></li><br>
-                    <small><input class= "ChangePass-Button"  onclick="myFunction()" type="button" value="Change Password"> </small>
+                    <small><input class="ChangePass-Button" name="changePasswordButton" type="button" onclick="myFunction()" value="Change Password"> </small>
                     <input id="NewPassword" type="text" value="New Password" style="display: none;" ><br>
                     <input id="confirmation" type = "text" value = "Confirm Password" style="display: none">
                 </ul>	
