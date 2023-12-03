@@ -5,7 +5,7 @@ jobs: # a collection of steps
     working_directory: ~/circleci-demo-tecducate # directory where steps will run
 
     docker: # run the steps with Docker
-      - image:  cimg/openjdk:15 # ...with this image as the primary container; this is where all `steps` will run
+      - image:  cimg/openjdk:15-jdk # ...with this image as the primary container; this is where all `steps` will run
 
     steps: # a collection of executable commands
 
