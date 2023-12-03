@@ -17,7 +17,7 @@
         <h1>Tecducate</h1>
     </header>
 
-    <body>
+    <body style="background-image: url('asset/Home-Backgrounf-Image.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
         <form action="login" method="post">
 			<table border="1" cellpadding="5">
 				<tr>
@@ -34,14 +34,14 @@
 				</tr>
 				<tr>
 					<td colspan="2" align="center">
-						<input type="submit" value="Login"/>
+						<input type="submit" value="Login" style="width: 200px; background-color: blue; color: white; font-size: 18px; cursor: pointer; transition: background-color 0.3s;"/>
 					</td>
 				</tr>
 			</table>
-			
+			<!--change color of error massage.-->
 			<!-- Display error message for invalid input -->
 			<c:if test= "${not empty loginStr}">
-				<div class="errir-message">${loginStr}</div>
+				<div class="errir-message"style="color: red;">${loginStr}</div>
 			</c:if>
 			
 			<a href="register.jsp" target="_self">Register Here</a>
