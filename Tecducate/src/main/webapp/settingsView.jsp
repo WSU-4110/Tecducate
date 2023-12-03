@@ -46,7 +46,7 @@
         });
 
         document.getElementById("update-profile-button").addEventListener("click", function () {
-            window.location.href = "updateProfileView.jsp";
+            window.location.href = "updateView?";
         })
         
     </script>
