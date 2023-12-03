@@ -83,7 +83,7 @@ public class ControlServlet extends HttpServlet {
         		 updateView(request, response);
         		 break;
         	 case "/delete":
-        		 System.out.println("The action is : UpdateView");
+        		 System.out.println("The action is : DeleteView");
         		 deleteProfile(request,response);
         		 break;
 	    	}
