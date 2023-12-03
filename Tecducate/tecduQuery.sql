@@ -14,10 +14,10 @@ CREATE TABLE if not exists User(
 ); 
 alter table user auto_increment = 500;
     
-insert into User(email, firstName, lastName, password, profLVL, prefLesson)
-values ('susie@gmail.com', 'Susie ', 'Guzman', 'susie1234', 1, 100),
-		('test', 'test', 'test', 't1234', 2, 101),
-		('root', 'default', 'default','pass1234', 3, 102);
+insert into User(email, firstName, lastName, password, phoneNumber, profLVL, prefLesson)
+values ('susie@gmail.com', 'Susie ', 'Guzman', 'susie1234', 15926348753, 1, 100),
+		('test', 'test', 'test', 't1234', 15923684759, 2, 101),
+		('root', 'default', 'default','pass1234', 95162384753, 3, 102);
 
 
 

@@ -139,6 +139,11 @@ public class ControlServlet extends HttpServlet {
 	    
 	    private void resultPage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException{
 	    	System.out.println("Result View");
+	    	
+	    	currentUser = (String) session.getAttribute("username");
+	    	int uID = userDAO.getID(currentUser); 
+	    	
+	    	
 	    	String ansrChoice = request.getParameter("ansr");
 	    	int quizID = (Integer) (session.getAttribute("quizID"));
 	    	String correctChoice = quizDAO.getCorrectAnsr(quizID);
