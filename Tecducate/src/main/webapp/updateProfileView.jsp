@@ -15,32 +15,51 @@
 	</head>
     <body>
         <h1>Update Account Information</h1>
-		<p>Welcome</p>
-        <form action = "update" method = "POST"> <!--Send From information-->
+        <form action = "update" method = "POST" onsubmit="return handleFormSubmit()"> <!--Send From information-->
                 
+    <input type="hidden" name="changePasswordButton" id="changePasswordButton" value="">
             <fieldset>             
                 <ul class="Personal-Infomation">
                     <li>
                     	<label for="email">Email<br></label>
-                    	<input type="text" name="email" id="email" value="${user.email}" disabled></li><br>
-                    <li><label for ="firstlast">First Name<br></label><input type="text" name="firstName" id="firstName" value="${user.firstName}"></li><br>
-                    <li><label for="last">Last Name<br></label><input type="text" name="lastName" id="lastName" value="${user.lastName}"></li><br>
-                    <small><input class="ChangePass-Button" name="changePasswordButton" type="button" onclick="myFunction()" value="Change Password"> </small>
-                    <input id="NewPassword" type="text" value="New Password" style="display: none;" ><br>
-                    <input id="confirmation" type = "text" value = "Confirm Password" style="display: none">
+                    	<input type="text" name="email" id="email" value="${user.email}" disabled></li>
+                    <li><label for ="first">First Name<br></label><input type="text" name="firstName" id="firstName" value="${user.firstName}"></li>
+                    <li><label for="last">Last Name<br></label><input type="text" name="lastName" id="lastName" value="${user.lastName}"></li>
+                    <li><label for="phone">Phone Number<br></label><input type="text" name="phoneNumber" id="phoneNumber" value="${user.phoneNum}"></li>
+                    <small><input id="ChangePass-Button" name="changePasswordButton" type="button" onclick="handlePasswordChange()" value="Change Password" style="width: 200px; font-size: 16px"></small>
+                    <input id="NewPassword" type="password" value="${user.password}" name="NewPassword" style="display: none;" ><br>
+                    <input id="confirmation" type = "password" value = " " name ="confirmation" style="display: none">
                 </ul>	
                 	
             </fieldset>
 
             <input class= "Update-Button" type="submit" value="Update">
       </form>
+      
+      <!-- Display error message for invalid input -->
+			<c:if test= "${not empty error}">
+				<div class="errir-message"style="color: red;">${error}</div>
+			</c:if>
             <script>
-                function myFunction() {
+            function handlePasswordChange() {
                     var newPasswordInput = document.getElementById("NewPassword");
                     newPasswordInput.style.display = "block"; // Display the new password 
                     var confrimationInput = document.getElementById("confirmation");
                     confrimationInput.style.display = "block";
+                    var changePasswordButtonInput = document.getElementById("changePasswordButton");
+                    changePasswordButtonInput.value = "passwordChangeRequested";
+                 
                 }
+            function handleFormSubmit() {
+
+                return true;
+            }
                 </script>
     </body>
+    
+    
+    
+        <footer>
+        <p>&copy; 2023 Tecducate</p>
+    </footer>
 </html>
