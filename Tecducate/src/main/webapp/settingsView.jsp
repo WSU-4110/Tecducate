@@ -17,15 +17,20 @@
     <section id="user-settings">
         <h2>Edit User Information</h2>
         
-        <form action = "delete" method ="post">
+        
         
        
         <div class="button-container">
         
+        <button id="reset-lesson-plan-button"><i class="fas fa-undo"></i> Reset Lesson Plan</button>
         
             <button id="update-profile-button"><i class="fas fa-user-edit"></i> Update Profile</button>
+            <form action = "delete" method ="post">
             <button id="delete-profile-button" type = "submit"><i class="fas fa-user-times"></i> Delete Profile</button>
-            <button id="reset-lesson-plan-button"><i class="fas fa-undo"></i> Reset Lesson Plan</button>
+           	</form>
+           	<form action = "reset" method ="post">
+           	<button id="reset-lesson-plan-button" type = "submit"><i class="fas fa-user-times"></i> Reset Lesson Plan</button>
+           	</form>
         </div>
         <script>
 
