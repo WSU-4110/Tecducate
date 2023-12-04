@@ -139,20 +139,6 @@ public class userDAO
         preparedStatement.close();
         return rowDeleted;     
     }
-    
-    public boolean reset(String email) throws SQLException {
-    	String sql = "UPDATE User SET profLVL = 1 WHERE email = ?";
-        connect_func();
-        
-        preparedStatement = (PreparedStatement) connect.prepareStatement(sql);
-        preparedStatement.setString(1, email);
-        
-        boolean levelReset = preparedStatement.executeUpdate() > 0;
-        preparedStatement.close();
-        
-        return levelReset;
-    
-    }
      
     public boolean update(user users) throws SQLException {
         String sql = "update User set firstName=?, lastName =?,password = ?, phoneNumber =? where email = ?";

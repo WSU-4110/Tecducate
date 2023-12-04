@@ -83,12 +83,8 @@ public class ControlServlet extends HttpServlet {
         		 updateView(request, response);
         		 break;
         	 case "/delete":
-        		 System.out.println("The action is : DeleteProfile");
+        		 System.out.println("The action is : DeleteView");
         		 deleteProfile(request,response);
-        		 break;
-        	 case "/reset":
-        		 System.out.println("The action is : ResetProfile");
-        		 resetProfile(request,response);
         		 break;
 	    	}
 	    }
@@ -100,13 +96,6 @@ public class ControlServlet extends HttpServlet {
 	    private void deleteProfile(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException{
 	    	String email = (String)session.getAttribute("username");
 	    	userDAO.delete(email);
-	    	
-	    	request.getRequestDispatcher("login.jsp").forward(request, response);
-	    }
-	    
-	    private void resetProfile(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException{
-	    	String email = (String)session.getAttribute("username");
-	    	userDAO.reset(email);
 	    	
 	    	request.getRequestDispatcher("login.jsp").forward(request, response);
 	    }
