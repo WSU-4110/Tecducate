@@ -21,18 +21,23 @@
 
     <section class="user-info-box">
         <h2>User Information</h2>
-        <p><strong>Name:</strong> Mohammad Azadegan</p>
-        <p><strong>Email:</strong> testing123@example.com</p>
-        <p><strong>Phone Number:</strong> (123) 456-7890</p>
+        <p><strong>Name:</strong> ${user.firstName} ${user.lastName}</p>
+        <p><strong>Email:</strong>  ${user.email}</p>
+        <p><strong>Phone Number:</strong>  ${user.phoneNum}</p>
     </section>
 
 
     <section class="lessons-box">
 
         <h2>Your Lessons</h2>
-        <p><strong>Lesson:</strong> Phishing Email</p>
-        <button id="go-to-lesson-button"><i class="fas fa-graduation-cap"></i> Go to lesson</button>
-    </section>
+         
+        <div>
+            <p><strong>Lesson ID:</strong> ${user.prefLesson}</p>
+        
+            <a href="lesson?id=${lessonId}">Go to lesson</a>
+        </div>
+  
+     </section>
 
 
     <section class="quiz-scores">
