@@ -22,10 +22,10 @@
 <section class="user-info-box">
 	<h2>User Information</h2>
    
-    <p><strong>Name:</strong> ${user.firstName} ${user.lastName}</p>
-    <p><strong>Email:</strong> ${user.email}</p>
-    <p><strong>Phone Number:</strong> ${user.phoneNum}</p>
-   
+    <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+    <p><strong>Email:</strong> ${email}</p>
+    <p><strong>Phone Number:</strong> ${phoneNum}</p>
+    
 </section>
 
 
