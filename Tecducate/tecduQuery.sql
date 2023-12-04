@@ -6,7 +6,7 @@ CREATE TABLE if not exists User(
 	firstName VARCHAR(20) NOT NULL, 
 	lastName VARCHAR(20) NOT NULL, 
 	password VARCHAR(20) NOT NULL, 
-    phoneNumber VARCHAR(20) NOT NULL Default '0',
+    phoneNumber varchar(20) NOT NULL Default '0',
     prefLesson int not null default 0,
     profLVL int not null default 1,
 	userID INT(10) NOT NULL auto_increment,
@@ -14,10 +14,10 @@ CREATE TABLE if not exists User(
 ); 
 alter table user auto_increment = 500;
     
-insert into User(email, firstName, lastName, password, phoneNumber, profLVL, prefLesson)
-values ('susie@gmail.com', 'Susie ', 'Guzman', 'susie1234', 15926348753, 1, 100),
-		('test', 'test', 'test', 't1234', 15923684759, 2, 101),
-		('root', 'default', 'default','pass1234', 95162384753, 3, 102);
+insert into User(email, firstName, lastName, password, profLVL, prefLesson)
+values ('susie@gmail.com', 'Susie ', 'Guzman', 'susie1234', 1, 100),
+		('test', 'test', 'test', 't1234', 2, 101),
+		('root', 'default', 'default','pass1234', 3, 102);
 
 
 
@@ -63,8 +63,6 @@ alter table lesson auto_increment = 100;
 insert into Lesson(details,sample)
 values ('PhishingEmail', 'The fake invoice scam, Email account upgrade scam, Google Docs scam, PayPal Scam'),
     ('PhishingLinks', 'http://101.10.1.101'),
-    ('AccountManagement', 'Use long password combinations, Combine numbers, lowercase, and uppercase letters');
-
 
 SET FOREIGN_KEY_CHECKS=0;
 create table Result(
