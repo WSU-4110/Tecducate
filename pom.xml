@@ -65,9 +65,17 @@
     <finalName>testing-java-applications-with-maven</finalName>
     <plugins>
       <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version>
-      </plugin>
+             <groupId>org.apache.maven.plugins</groupId>
+             <artifactId>maven-compiler-plugin</artifactId>
+             <version>3.8.1</version>
+             <configuration>
+                 <source>15</source>
+                 <target>15</target>
+                 <encoding>UTF-8</encoding>
+                 <fork>true</fork>
+                 <executable>C:\Progra~1\Java\jdk-15.0.2\bin\javac</executable>
+             </configuration>
+         </plugin>
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.0.0-M5</version>
