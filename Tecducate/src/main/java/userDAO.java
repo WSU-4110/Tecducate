@@ -94,11 +94,12 @@ public class userDAO
             String firstName = resultSet.getString("firstName");
             String lastName = resultSet.getString("lastName");
             String password = resultSet.getString("password");
+            String phoneNum = resultSet.getString("phoneNum");
             int prefLesson = resultSet.getInt("prefLesson");
             int profLVL = resultSet.getInt("profLVL");
 
              
-            user users = new user(email,firstName,lastName,password,prefLesson, profLVL);
+            user users = new user(email,firstName,lastName,password,phoneNum,prefLesson, profLVL);
             listUser.add(users);
         }        
         resultSet.close();
@@ -140,14 +141,15 @@ public class userDAO
     }
      
     public boolean update(user users) throws SQLException {
-        String sql = "update User set firstName=?, lastName =?,password = ? where email = ?";
+        String sql = "update User set firstName=?, lastName =?,password =?, phoneNumber =? where email = ?";
         connect_func();
         
         preparedStatement = (PreparedStatement) connect.prepareStatement(sql);
-        preparedStatement.setString(1, users.getEmail());
-		preparedStatement.setString(2, users.getFirstName());
-		preparedStatement.setString(3, users.getLastName());
-		preparedStatement.setString(4, users.getPassword());
+		preparedStatement.setString(1, users.getFirstName());
+		preparedStatement.setString(2, users.getLastName());
+		preparedStatement.setString(3, users.getPassword());
+		preparedStatement.setString(4, users.getPhoneNum());
+        preparedStatement.setString(5, users.getEmail());
          
         boolean rowUpdated = preparedStatement.executeUpdate() > 0;
         preparedStatement.close();
@@ -156,7 +158,7 @@ public class userDAO
     
     public int getLVL(String email) throws SQLException {
     	int LVL = 0;
-        String sql = "SELECT profLVL FROM User WHERE email = ?";
+        String sql = "SELECT profLVL FROM User WHERE email = ?;";
          
         connect_func();
          
@@ -166,15 +168,93 @@ public class userDAO
         ResultSet resultSet = preparedStatement.executeQuery();
          
         if (resultSet.next()) {
-            int profLVL = resultSet.getInt("profLVL");
+            LVL = resultSet.getInt("profLVL");
             
-            LVL = profLVL;
         }
          
         resultSet.close();
         statement.close();
          
         return LVL;
+    }
+    
+    
+    public int getLVL(int uID) throws SQLException {
+    	System.out.println("GET LEVEL RUNNNING IN USERDAO");
+    	
+    	int LVL = 0;
+        String sql = "SELECT profLVL FROM User WHERE userID = ?;";
+         
+        connect_func();
+         
+        preparedStatement = (PreparedStatement) connect.prepareStatement(sql);
+        preparedStatement.setInt(1, uID);
+         
+        ResultSet resultSet = preparedStatement.executeQuery();
+         
+        if (resultSet.next()) {
+            LVL = resultSet.getInt("profLVL");
+            
+        }
+         
+        resultSet.close();
+        statement.close();
+        
+        System.out.println("GET LEVEL TERMINATED IN USERDAO");
+         
+        return LVL;
+    }
+    
+    
+    public void levelUP(int uID) throws SQLException {
+    	System.out.println("LEVELUP RUNNNING IN USERDAO");
+    	System.out.println("USERID: " + uID);
+    	
+    	int currentLVL = getLVL(uID);
+    	System.out.println("CURRENT LEVEL: " + currentLVL);
+    	
+    	if (currentLVL != 3) {
+    		
+    		currentLVL++;
+    		System.out.println("NEW LEVEL: " + currentLVL);
+    		String sql = "update User set profLVL = " + currentLVL + " where userID = " + uID;
+            connect_func();
+            statement =  (Statement) connect.createStatement();
+            
+            statement.execute(sql);   
+            
+            disconnect();
+            
+    	}
+    	
+    	System.out.println("LEVELUP TERMINATED IN USERDAO");
+    }
+    
+    public int getID(String email) throws SQLException {
+    	System.out.println("GET USERID RUNNNING IN USERDAO");
+    	
+    	int uID = 0;
+        String sql = "SELECT userID FROM User WHERE email = ?";
+         
+        connect_func();
+         
+        preparedStatement = (PreparedStatement) connect.prepareStatement(sql);
+        preparedStatement.setString(1, email);
+         
+        ResultSet resultSet = preparedStatement.executeQuery();
+         
+        if (resultSet.next()) {
+            uID = resultSet.getInt("userID");
+        }
+         
+        resultSet.close();
+        statement.close();
+        
+        System.out.println("UserID: " + uID);
+        
+        System.out.println("GET USERID TERMINATED IN USERDAO");
+       
+        return uID;
     }
     
     public user getUser(String email) throws SQLException {
@@ -192,10 +272,11 @@ public class userDAO
             String firstName = resultSet.getString("firstName");
             String lastName = resultSet.getString("lastName");
             String password = resultSet.getString("password");
+            String phoneNum = resultSet.getString("phoneNumber");
             int prefLesson = resultSet.getInt("prefLesson");
             int profLVL = resultSet.getInt("profLVL");
             
-            user = new user(email, firstName, lastName, password, prefLesson, profLVL);
+            user = new user(email, firstName, lastName, password, phoneNum, prefLesson, profLVL);
         }
          
         resultSet.close();
