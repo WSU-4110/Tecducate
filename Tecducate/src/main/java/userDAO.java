@@ -94,7 +94,7 @@ public class userDAO
             String firstName = resultSet.getString("firstName");
             String lastName = resultSet.getString("lastName");
             String password = resultSet.getString("password");
-	    String phoneNum = resultSet.getString("phoneNum");
+            String phoneNum = resultSet.getString("phoneNumber");
             int prefLesson = resultSet.getInt("prefLesson");
             int profLVL = resultSet.getInt("profLVL");
 
