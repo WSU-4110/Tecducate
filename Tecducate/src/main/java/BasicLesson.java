@@ -54,4 +54,10 @@ public  class BasicLesson implements Lesson {
             throws ServletException, IOException {
         // Default implementation or common behavior
     }
+
+	@Override
+	public void displayContent() {
+		// TODO Auto-generated method stub
+		
+	}
 }

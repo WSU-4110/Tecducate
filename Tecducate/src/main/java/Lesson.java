@@ -6,5 +6,8 @@ import javax.servlet.http.HttpServletResponse;
 
 // Lesson interface
 public interface Lesson {
-    void displayContent();
+
+	void displayContent(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException;
+
+	void displayContent();
 }
