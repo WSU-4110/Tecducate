@@ -47,15 +47,17 @@ public  class BasicLesson implements Lesson {
     }
     
     
-
-   
-    @Override
-    public void displayContent(){
-    }
+	@Override
+	public void displayContent(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		
+	}
 
 	@Override
 	public void displayContent() {
 		// TODO Auto-generated method stub
 		
 	}
+
 }
