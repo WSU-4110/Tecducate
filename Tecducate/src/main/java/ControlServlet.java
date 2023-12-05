@@ -25,6 +25,7 @@ public class ControlServlet extends HttpServlet {
 	    private quizDAO quizDAO = new quizDAO();
 	    private String currentUser;
 	    private HttpSession session=null;
+		private String NULL;
 	    
 	    public ControlServlet()
 	    {
@@ -81,6 +82,10 @@ public class ControlServlet extends HttpServlet {
         		 System.out.println("The action is : UpdateView");
         		 updateView(request, response);
         		 break;
+        	 case "/delete":
+        		 System.out.println("The action is : DeleteView");
+        		 deleteProfile(request,response);
+        		 break;
 	    	}
 	    }
 	    catch(Exception ex) {
@@ -88,13 +93,43 @@ public class ControlServlet extends HttpServlet {
 	    	}
 	    }
 	    
-	    
+	    private void deleteProfile(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException{
+	    	String email = (String)session.getAttribute("username");
+	    	userDAO.delete(email);
+	    	
+	    	request.getRequestDispatcher("login.jsp").forward(request, response);
+	    }
 
 	    private void userPage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException{
 	    	System.out.println("profile View");
 	    	String email = (String)session.getAttribute("username");
 	    	user user = userDAO.getUser(email);
+	    	
+	    	String firstName = user.getFirstName();
+	    	String lastName = user.getLastName();
+	    	String phoneNum = user.getPhoneNum();
+	 
+	    	if (firstName == null){
+	    			firstName = "n/a";
+	    	}
+	    	
+	    	if (lastName == null){
+    			lastName = "n/a";
+	    	}
+	    	
+	    	if (email == null){
+    			email = "n/a";
+    	}
+	    	
+	    	if (phoneNum == null){
+    			phoneNum = "n/a";
+	    	}
+	    		    	
 	    	request.setAttribute("user", user);
+	    	request.setAttribute("firstName", firstName);
+	    	request.setAttribute("lastName", lastName);
+	    	request.setAttribute("email", email);
+	    	request.setAttribute("phoneNum", phoneNum);
 	    	List<user> userList = userDAO.listAllUsers();
 	    	request.setAttribute("userList", userList);
 	        RequestDispatcher dispatcher = request.getRequestDispatcher("profileView.jsp");
@@ -218,38 +253,43 @@ public class ControlServlet extends HttpServlet {
 	        dispatcher.forward(request, response);
 	    }
 	    private void update(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException, SQLException {
-	    	
+	    		System.out.println("Updating the database");
 	   	 	String firstName = request.getParameter("firstName");
 	   	 	String lastName = request.getParameter("lastName");
+		    	String phoneNum = request.getParameter("phoneNumber");
 	   	 	String password = request.getParameter("Newpassword");
 	   	 	String confirm = request.getParameter("confirmation");
 	   	 	currentUser = (String)session.getAttribute("username");
 		   	user existingUser = userDAO.getUser(currentUser);
 		   	
 	        if (existingUser != null) {
+		    existingUser.setEmail(currentUser);
 	            // Update the user's information
 	            existingUser.setFirstName(firstName);
 	            existingUser.setLastName(lastName);
-	            if (password != null && password.matches(confirm)) {
-	            	existingUser.setPassword(password);
-            	// Call the DAO method to update the user in the database
-            	userDAO.update(existingUser);
-            	response.sendRedirect("profile.jsp"); // Redirect to the user's profile page
-            	}
+		    existingUser.setPhoneNum(phoneNum);
+		    // Check if the "Change Password" button was clicked
+	            if (request.getParameter("changePasswordButton") != "") {	
+
+			// If yes, check if the password and confirmation match
+	            	if (password != null && !password.isBlank() && password.equals(confirm)) {
+	            		existingUser.setPassword(password);
+			}
 	            
-
-	            else {
-	    	        System.out.println("Password and Password Confirmation do not match.");
-	    	        request.setAttribute("error", "Password and Password Confirmation do not match.");
-	            	// Call the DAO method to update the user in the database
+	            	else {
+		    	        System.out.println("Password and Password Confirmation do not match.");
+		    	        request.setAttribute("error", "Password and Password Confirmation do not match.");
+				updateView(request, response);
+		            	return; // Stop further processing if password validation fails
+	    	   	 }
+		    }
+			// Call the DAO method to update the user in the database
 	            	userDAO.update(existingUser);
-	    	        request.getRequestDispatcher("updateProfile.jsp").forward(request, response);
-	    	    }
+	            	System.out.println("Update Successful");
+		        userPage(request, response); // Redirect to the user's profile page
 
-            	// Call the DAO method to update the user in the database
-            	userDAO.update(existingUser);
-
-	        } else {
+	        } 
+		else {
 	            System.out.println("User not found.");
 	            request.setAttribute("error", "User not found.");
 	            request.getRequestDispatcher("updateProfile.jsp").forward(request, response);
