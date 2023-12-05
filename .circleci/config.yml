@@ -7,4 +7,8 @@ jobs:
     steps:
       - checkout
       - run: mvn clean install
+<<<<<<< HEAD
       - run: mvn test
+=======
+      - run: mvn test
+>>>>>>> branch 'Geovanni' of https://github.com/WSU-4110/Tecducate.git
