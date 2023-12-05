@@ -56,10 +56,11 @@
     
     
     <section class="lesson-recomendations">
-        <h2>Try These Other Lessons</h2>
+        <h2>List of All Lessons</h2>
         <ul>
-            <li><a href="lesson?id=101">Account Management</a></li>
-            <li><a href="lesson?id=102">Virus Identification</a></li>
+            <li><a href="GetlessonData?id=100">Phishing Emails</a></li>
+            <li><a href="GetlessonData?id=101">Phishing Links</a></li>
+            <li><a href="GetlessonData?id=102">Account Management</a></li>
         </ul>
 </section>
 

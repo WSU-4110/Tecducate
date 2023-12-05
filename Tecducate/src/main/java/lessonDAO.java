@@ -147,6 +147,64 @@ public class lessonDAO
         return lesson;
     }
     
+    public lessonData getLessonData(int lID) throws SQLException {
+    	System.out.println("GET LESSON RUNNNING IN LESSONDAO");
+    	
+    	lessonData lesson = null;
+        String sql = "SELECT * FROM Lesson WHERE lessonID = ?";
+         
+        connect_func();
+         
+        preparedStatement = (PreparedStatement) connect.prepareStatement(sql);
+        preparedStatement.setInt(1, lID);
+         
+        ResultSet resultSet = preparedStatement.executeQuery();
+         
+        if (resultSet.next()) {
+        	
+        	int lessonID = resultSet.getInt("lessonID");
+        	System.out.println(lessonID);
+        	String title = resultSet.getString("title");
+        	System.out.println(title);
+        	String description = resultSet.getString("description");
+        	System.out.println(description);
+        	String topic1 = resultSet.getString("topic1");
+        	System.out.println(topic1);
+        	String topic2 = resultSet.getString("topic2");
+        	System.out.println(topic2);
+        	String topic3 = resultSet.getString("topic3");
+        	System.out.println(topic3);
+        	String detail1 = resultSet.getString("detail1");
+        	System.out.println(detail1);
+        	String detail2 = resultSet.getString("detail2");
+        	System.out.println(detail2);
+        	String detail3 = resultSet.getString("detail3");
+        	System.out.println(detail3);
+        	String detail4 = resultSet.getString("detail4");
+        	System.out.println(detail4);
+        	String detail5 = resultSet.getString("detail5");
+        	System.out.println(detail5);
+        	String detail6 = resultSet.getString("detail6");
+        	System.out.println(detail6);
+        	String detail7 = resultSet.getString("detail7");
+        	System.out.println(detail7);
+        	String detail8 = resultSet.getString("detail8");
+        	System.out.println(detail8);
+        	String detail9 = resultSet.getString("detail9");
+        	System.out.println(detail9);
+        	
+        	lesson = new lessonData(lessonID, title, description, topic1, topic2, topic3, detail1, detail2, detail3, detail4, detail5, detail6, detail7, detail8, detail9);
+        	
+        }
+         
+        resultSet.close();
+        preparedStatement.close();
+        
+        System.out.println("GET LESSON TERMINATED IN LESSONDAO");
+       
+        return lesson;
+    }
+    
     public lessonData indexandgetLesson(int lessonID) throws SQLException{
     	
     	String correctLesson = "";
