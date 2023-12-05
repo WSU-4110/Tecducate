@@ -11,9 +11,9 @@ public  class BasicLesson implements Lesson {
     private String lessonLink;
   
     public BasicLesson(int lessonId, String Details, String Samples) {
-        this.lessonId = lessonId;
-        this.details = Details;
-        this.samples = Samples;
+    	setlessonID(lessonId);
+        setDetails(Details);
+        setSamples(Samples);
     }
     
     public void setlessonID(int ID){
@@ -52,4 +52,10 @@ public  class BasicLesson implements Lesson {
     @Override
     public void displayContent(){
     }
+
+	@Override
+	public void displayContent() {
+		// TODO Auto-generated method stub
+		
+	}
 }
