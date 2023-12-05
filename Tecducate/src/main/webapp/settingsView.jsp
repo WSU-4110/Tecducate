@@ -29,9 +29,8 @@
 
         <div class="button-container">
         
-        <button id="reset-lesson-plan-button"><i class="fas fa-undo"></i> Reset Lesson Plan</button>
         
-            <button id="update-profile-button"><i class="fas fa-user-edit"></i> Update Profile</button>
+            <button style="width: 200px; margin-left: 490px;" id="update-profile-button"><i class="fas fa-user-edit"></i> Update Profile</button>
             <form action = "delete" method ="post">
             <button id="delete-profile-button" type = "submit"><i class="fas fa-user-times"></i> Delete Profile</button>
            	</form>
