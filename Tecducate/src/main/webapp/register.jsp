@@ -12,7 +12,11 @@
 	</head>
 <!--Header of the Page-->
     <header>
-        <h1>Tecducate</h1>
+        <h1 style="font-size: 100px;">Tecducate</h1>
+        <p>Welcome to Tecducate: Empowering Seniors in the Digital World!<br><br>
+		At Tecducate, we understand the importance of online safety, especially for our cherished seniors.
+		 As the digital landscape evolves, so do the threats it poses. This registration page is your gateway
+		  to a unique platform designed exclusively for elderly individuals seeking to enhance their cybersecurity knowledge.</p>
         <h2>Get Started with a free account</h2>
         <p>Create a free tecducate account to start learning & keep record of your progress.
          Already have a Tecducate account?<a href="login.jsp">Log in here<a></p> <!--go to log in page directly from sign up page-->
@@ -52,7 +56,14 @@
 	    </form>
     </body>
     
-    
+    <c:if test= "${not empty errorOne}">
+				<div class="error-message" style = "color: red;">${errorOne}</div>
+			</c:if>
+			
+	 <c:if test= "${not empty errortwo}">
+				<div class="error-message" style= "color: red;">${errorTwo}</div>
+			</c:if>
+			
     <!--Footer-->
    	<footer style="background-color: rgb(64, 128, 128);">
    	<div id="main">
@@ -64,6 +75,8 @@
         </br> &copy; 2023 Tecducate</p>
      </div>
     </footer>
+    
+    
     
 
     <script src="changeStyle.js"></script>
