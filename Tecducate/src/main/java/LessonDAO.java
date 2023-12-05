@@ -86,7 +86,7 @@ public class LessonDAO
         if (connect != null && !connect.isClosed()) {
         	connect.close();
         }
-    }
+    } 
     
     public void indexandgetLesson(Lesson lesson) {
     	
