@@ -10,4 +10,5 @@ public interface Lesson {
 	void displayContent(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException;
 
 	void displayContent();
+
 }

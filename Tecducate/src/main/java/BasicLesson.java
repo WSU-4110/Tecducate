@@ -50,9 +50,7 @@ public  class BasicLesson implements Lesson {
 
    
     @Override
-    public void displayContent(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        // Default implementation or common behavior
+    public void displayContent(){
     }
 
 	@Override
