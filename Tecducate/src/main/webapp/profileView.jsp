@@ -81,7 +81,7 @@
         });
 
         document.getElementById("go-to-lesson-button").addEventListener("click", function () {
-            window.location.href = "lessonView.jsp";
+            window.location.href = "lesson";
         });
     </script>
 
