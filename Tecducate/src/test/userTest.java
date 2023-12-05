@@ -67,7 +67,7 @@ class userTest {
 	void testGetPrefLesson() {
         assertEquals(0, testUser.getPrefLesson());
 		//fail("Not yet implemented");
-        assertEquals(1, testUser.getPrefLesson());
+        //assertEquals(1, testUser.getPrefLesson());
 		//fail("Not yet implemented");
 	}
 	

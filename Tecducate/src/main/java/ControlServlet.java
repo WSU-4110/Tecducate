@@ -23,6 +23,8 @@ public class ControlServlet extends HttpServlet {
 	    private static final long serialVersionUID = 1L;
 	    private userDAO userDAO = new userDAO();
 	    private quizDAO quizDAO = new quizDAO();
+	    private lessonDAO lessonDAO = new lessonDAO();
+	    
 	    private String currentUser;
 	    private HttpSession session=null;
 		private String NULL;
@@ -36,6 +38,7 @@ public class ControlServlet extends HttpServlet {
 	    {
 	    	userDAO = new userDAO();
 	    	quizDAO = new quizDAO();
+	    	lessonDAO = new lessonDAO();
 	    	currentUser= "";
 	    }
 	    
@@ -55,8 +58,8 @@ public class ControlServlet extends HttpServlet {
         	case "/register":
         		register(request, response);
         		break;
-        	case "/lessons": 
-                System.out.println("The action is: lessons");
+        	case "/lesson": 
+                System.out.println("The action is: lesson");
                 lessonPage(request, response);           	
                 break;
         	case "/quiz": 
@@ -153,6 +156,44 @@ public class ControlServlet extends HttpServlet {
 	    
 	    private void lessonPage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException{
 	    	System.out.println("Lesson View");
+	    	currentUser = (String) session.getAttribute("username");
+	    	int prefLesson = userDAO.getLesson(currentUser);
+	    	System.out.println(currentUser);
+	    	System.out.println(prefLesson);
+	    	
+	    	lessonData lessonData = lessonDAO.getLesson(prefLesson);
+	    	
+	    	String title = lessonData.getTitle();
+	    	String description = lessonData.getDescription();
+	    	String topic1 = lessonData.getTopic1();
+	    	String topic2 = lessonData.getTopic2();
+	    	String topic3 = lessonData.getTopic3();
+	    	String detail1 = lessonData.getDetail1();
+	    	String detail2 = lessonData.getDetail2();
+	    	String detail3 = lessonData.getDetail3();
+	    	String detail4 = lessonData.getDetail4();
+	    	String detail5 = lessonData.getDetail5();
+	    	String detail6 = lessonData.getDetail6();
+	    	String detail7 = lessonData.getDetail7();
+	    	String detail8 = lessonData.getDetail8();
+	    	String detail9 = lessonData.getDetail9();
+	    	
+	    	request.setAttribute("title", title);
+	    	request.setAttribute("description", description);
+	    	request.setAttribute("topic1", topic1);
+	    	request.setAttribute("topic2", topic2);
+	    	request.setAttribute("topic3", topic3);
+	    	request.setAttribute("detail1", detail1);
+	    	request.setAttribute("detail2", detail2);
+	    	request.setAttribute("detail3", detail3);
+	    	request.setAttribute("detail4", detail4);
+	    	request.setAttribute("detail5", detail5);
+	    	request.setAttribute("detail6", detail6);
+	    	request.setAttribute("detail7", detail7);
+	    	request.setAttribute("detail8", detail8);
+	    	request.setAttribute("detail9", detail9);
+	    	
+	    	request.setAttribute("prefLesson", prefLesson);
 	    	request.getRequestDispatcher("lessonView.jsp").forward(request, response);
 	    }
 	    
@@ -269,30 +310,30 @@ public class ControlServlet extends HttpServlet {
 	    		System.out.println("Updating the database");
 	   	 	String firstName = request.getParameter("firstName");
 	   	 	String lastName = request.getParameter("lastName");
-		    	String phoneNum = request.getParameter("phoneNumber");
-	   	 	String password = request.getParameter("Newpassword");
+		    String phoneNum = request.getParameter("phoneNumber");
+	   	 	String password = request.getParameter("NewPassword");
 	   	 	String confirm = request.getParameter("confirmation");
 	   	 	currentUser = (String)session.getAttribute("username");
 		   	user existingUser = userDAO.getUser(currentUser);
 		   	
 	        if (existingUser != null) {
-		    existingUser.setEmail(currentUser);
+	        	existingUser.setEmail(currentUser);
 	            // Update the user's information
 	            existingUser.setFirstName(firstName);
 	            existingUser.setLastName(lastName);
-		    existingUser.setPhoneNum(phoneNum);
+	            existingUser.setPhoneNum(phoneNum);
 		    // Check if the "Change Password" button was clicked
-	            if (request.getParameter("changePasswordButton") != "") {	
+	            if (request.getParameter("changePasswordButton") != "") {
 
 			// If yes, check if the password and confirmation match
 	            	if (password != null && !password.isBlank() && password.equals(confirm)) {
 	            		existingUser.setPassword(password);
-			}
+	            	}
 	            
 	            	else {
 		    	        System.out.println("Password and Password Confirmation do not match.");
 		    	        request.setAttribute("error", "Password and Password Confirmation do not match.");
-				updateView(request, response);
+		    	        updateView(request, response);
 		            	return; // Stop further processing if password validation fails
 	    	   	 }
 		    }
@@ -305,7 +346,7 @@ public class ControlServlet extends HttpServlet {
 		else {
 	            System.out.println("User not found.");
 	            request.setAttribute("error", "User not found.");
-	            request.getRequestDispatcher("updateProfile.jsp").forward(request, response);
+	            request.getRequestDispatcher("updateProfileView.jsp").forward(request, response);
 	        }
 	    }
 	  }

@@ -23,7 +23,7 @@
        
 
 
-        <form action = "delete" method ="post">
+<!--      <form action = "delete" method ="post"> -->  
         
        
 
