@@ -7,15 +7,21 @@
 		<title id = "SignUp">LogIn Page</title>
 		<meta name = "viewport" content= "width=device-width, initial-scale=1.0">
 		<meta charset="utf-8">
-		<link rel="shortcut icon" type="image/png" href="BrandSamllLogo.png">
+		<link rel="shortcut icon" type="image/png" href="http://localhost:8080/Tecducate/asset/HomeLogo.png">
 		<meta name="description" content="Log into Tecducate">
-		<link rel="stylesheet" href="http://localhost:8080/Tecducate/style/signupStyle.css" type="text/css">
+		<link rel="stylesheet" href="http://localhost:8080/Tecducate/style/signupStyle1.css" type="text/css">
 		<link rel="stylesheet" href="http://localhost:8080/Tecducate/style/loginStyle.css" type="text/css">
+		<link rel="stylesheet" href="http://localhost:8080/Tecducate/style/footer.css" type="text/css">
+	
+		
 	</head>
 
     <header>
-        <h1>Tecducate</h1>
+        <h1 style="font-size: 70px;">Tecducate</h1>
+        
     </header>
+    <button class="navbar__btn" id="change-style-button" onclick="toggleStyles()">Style</button>
+    
 
     <body>
         <form action="login" method="post">
@@ -46,9 +52,18 @@
 			
 			<a href="register.jsp" target="_self">Register Here</a>
 		</form>
+		
+		<script src="changeStyle.js"></script>
+		
     </body>
-    <footer>
-        <p><small>Tecducate.com  October 1st, 2023</small></p>
+     <footer>
+        <p><img class="image" src="http://localhost:8080/Tecducate/asset/logo.png" style="width: 170px; height: 170px; margin-left: 90px; float: left;"> 
+        </br> 42 W Warren Ave, Detroit, MI | 313-000-0000 | Tecducate@gmail.com </br></br>
+        <a href="https://www.instagram.com/"><img src="http://localhost:8080/Tecducate/asset/instagram.png" alt="Instagram" style="width: 50px; height: 35px; margin-left: 50px;"></a>          
+    	<a href="https://www.facebook.com/"><img src="http://localhost:8080/Tecducate/asset/facebook.png" alt="Facebook" style="width: 40px; height: 35px; margin-left: 50px;"></a> 
+    	<a href="https://www.youtube.com/"><img src="http://localhost:8080/Tecducate/asset/youtube.png" alt="YouTube" style="width: 50px; height: 35px; margin-left: 50px;"></a></br>
+        </br> &copy; 2023 Tecducate</p>
     </footer>
+
 
 </html>
