@@ -269,30 +269,30 @@ public class ControlServlet extends HttpServlet {
 	    		System.out.println("Updating the database");
 	   	 	String firstName = request.getParameter("firstName");
 	   	 	String lastName = request.getParameter("lastName");
-		    	String phoneNum = request.getParameter("phoneNumber");
-	   	 	String password = request.getParameter("Newpassword");
+		    String phoneNum = request.getParameter("phoneNumber");
+	   	 	String password = request.getParameter("NewPassword");
 	   	 	String confirm = request.getParameter("confirmation");
 	   	 	currentUser = (String)session.getAttribute("username");
 		   	user existingUser = userDAO.getUser(currentUser);
 		   	
 	        if (existingUser != null) {
-		    existingUser.setEmail(currentUser);
+	        	existingUser.setEmail(currentUser);
 	            // Update the user's information
 	            existingUser.setFirstName(firstName);
 	            existingUser.setLastName(lastName);
-		    existingUser.setPhoneNum(phoneNum);
+	            existingUser.setPhoneNum(phoneNum);
 		    // Check if the "Change Password" button was clicked
-	            if (request.getParameter("changePasswordButton") != "") {	
+	            if (request.getParameter("changePasswordButton") != "") {
 
 			// If yes, check if the password and confirmation match
 	            	if (password != null && !password.isBlank() && password.equals(confirm)) {
 	            		existingUser.setPassword(password);
-			}
+	            	}
 	            
 	            	else {
 		    	        System.out.println("Password and Password Confirmation do not match.");
 		    	        request.setAttribute("error", "Password and Password Confirmation do not match.");
-				updateView(request, response);
+		    	        updateView(request, response);
 		            	return; // Stop further processing if password validation fails
 	    	   	 }
 		    }
@@ -305,7 +305,7 @@ public class ControlServlet extends HttpServlet {
 		else {
 	            System.out.println("User not found.");
 	            request.setAttribute("error", "User not found.");
-	            request.getRequestDispatcher("updateProfile.jsp").forward(request, response);
+	            request.getRequestDispatcher("updateProfileView.jsp").forward(request, response);
 	        }
 	    }
 	  }
