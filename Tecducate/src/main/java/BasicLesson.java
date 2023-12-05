@@ -23,7 +23,7 @@ public  class BasicLesson implements Lesson {
     	return lessonId;
     }
     
-    private void setDetails(String Details) {
+    public void setDetails(String Details) {
     	this.details = Details;
     }
     public String getDetails() {
@@ -31,7 +31,7 @@ public  class BasicLesson implements Lesson {
     		
     }
     
-    private void setSamples(String Samples) {
+    public void setSamples(String Samples) {
     	this.samples = Samples;
     }
     public String getSamples() {
@@ -50,8 +50,6 @@ public  class BasicLesson implements Lesson {
 
    
     @Override
-    public void displayContent(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        // Default implementation or common behavior
+    public void displayContent(){
     }
 }
