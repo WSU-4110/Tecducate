@@ -7,7 +7,7 @@
   flex-wrap:nowrap;
   margin: 1em;
   padding: 10px;
-  background-color: lightblue;
+  background-color: rgb(64, 128, 128);
   border-radius: 15px;
   width: 75%;
   align-self: center;
@@ -64,7 +64,7 @@ The 3 blocks include: QuestionSection, SampleSection, and AnswerSection*/
   margin: 1em;
   font-size: 16px;
   text-align: center;
-  background-color: coral;
+  background-color: rgb(192, 192, 192);
   border-radius: 15px;
   color: white;
 }

@@ -23,6 +23,7 @@
         <a href="#" id="settings-icon"><i class="fas fa-cog"></i> Settings</a>
     </header>
     <button class="navbar__btn" id="change-style-button" onclick="toggleStyles()">Style</button>
+    <a href="logout" >Logout</a>
     
 
 <section class="user-info-box">

@@ -6,7 +6,7 @@ CREATE TABLE if not exists User(
 	firstName VARCHAR(20) NOT NULL default '', 
 	lastName VARCHAR(20) NOT NULL default '', 
 	password VARCHAR(20) NOT NULL default '1234', 
-    phoneNumber varchar(20) NOT NULL Default '0',
+    phoneNumber varchar(20) Default NULL,
     prefLesson int not null default 0,
     profLVL int not null default 1,
 	userID INT(10) NOT NULL auto_increment,

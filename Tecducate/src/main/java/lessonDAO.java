@@ -204,6 +204,39 @@ public class lessonDAO
        
         return lesson;
     }
+
+    
+    public List<lessonData> getOtherLesson(int lID) throws SQLException {
+    	System.out.println("GET OTHER LESSON RUNNNING IN LESSONDAO");
+    	
+    	lessonData lesson = null;
+    	List<lessonData> lessonList = new ArrayList<lessonData>();
+        String sql = "SELECT * FROM Lesson WHERE lessonID = ?";
+         
+        connect_func();
+         
+        preparedStatement = (PreparedStatement) connect.prepareStatement(sql);
+        preparedStatement.setInt(1, lID);
+         
+        ResultSet resultSet = preparedStatement.executeQuery();
+         
+        if (resultSet.next()) {
+        	
+        	int lessonID = resultSet.getInt("lessonID");
+        	System.out.println(lessonID);
+        	String title = resultSet.getString("title");
+        	System.out.println(title);
+        	lesson = new lessonData(lessonID, title, "", "", "", "", "", "", "", "", "", "", "", "", "");
+        	lessonList.add(lesson);
+        }
+         
+        resultSet.close();
+        preparedStatement.close();
+        
+        System.out.println("GET OTHER LESSON TERMINATED IN LESSONDAO");
+       
+        return lessonList;
+    }
     
     public lessonData indexandgetLesson(int lessonID) throws SQLException{
     	
