@@ -6,7 +6,7 @@ CREATE TABLE if not exists User(
 	firstName VARCHAR(20) NOT NULL default '', 
 	lastName VARCHAR(20) NOT NULL default '', 
 	password VARCHAR(20) NOT NULL default '1234', 
-    phoneNumber varchar(20) NOT NULL Default '0',
+    phoneNumber varchar(20) default NULL,
     prefLesson int not null default 0,
     profLVL int not null default 1,
 	userID INT(10) NOT NULL auto_increment,
@@ -15,9 +15,11 @@ CREATE TABLE if not exists User(
 alter table user auto_increment = 500;
     
 insert into User(email, firstName, lastName, password, profLVL, prefLesson)
+
 values ('susie@gmail.com', 'Susie ', 'Guzman', 'susie1234', 1, 100),
 		('test', 'test', 'test', 't1234', 2, 101),
 		('Donald@gmail.com', 'default', 'default','pass1234', 3, 102);
+select * from User;
 
 insert into User(email, profLVL, prefLesson)
 values ('Billy@gmail.com', 2, 100),
