@@ -82,14 +82,14 @@
 
 
   <!--Dedicated section for website footer to provide contact information-->
-  <footer id="pageFooter">
-    <h3>Copyright 2023 Tecducate</h3>
-    <p>For more information find us at 1030 longworm, San Diego, California, 24001
-    </p>
-    <h3>Contact Us</h3>
-    <p>1-900-324-2459</p>
-    <p><a href="mailto: hd3652@wayne.edu"> tecducate@outlook.com</a></p>
-  </footer>
+  <footer>
+        <p><img class="image" src="http://localhost:8080/Tecducate/asset/logo.png" style="width: 170px; height: 170px; margin-left: 90px; float: left;"> 
+        </br> 42 W Warren Ave, Detroit, MI | 313-000-0000 | Tecducate@gmail.com </br></br>
+        <a href="https://www.instagram.com/"><img src="http://localhost:8080/Tecducate/asset/instagram.png" alt="Instagram" style="width: 50px; height: 35px; margin-left: 50px;"></a>          
+    	<a href="https://www.facebook.com/"><img src="http://localhost:8080/Tecducate/asset/facebook.png" alt="Facebook" style="width: 40px; height: 35px; margin-left: 50px;"></a> 
+    	<a href="https://www.youtube.com/"><img src="http://localhost:8080/Tecducate/asset/youtube.png" alt="YouTube" style="width: 50px; height: 35px; margin-left: 50px;"></a></br>
+        </br> &copy; 2023 Tecducate</p>
+   </footer>
 
   </body>
 
