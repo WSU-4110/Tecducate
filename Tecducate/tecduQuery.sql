@@ -6,7 +6,11 @@ CREATE TABLE if not exists User(
 	firstName VARCHAR(20) NOT NULL default '', 
 	lastName VARCHAR(20) NOT NULL default '', 
 	password VARCHAR(20) NOT NULL default '1234', 
+<<<<<<< HEAD
     phoneNumber varchar(20) default NULL,
+=======
+    phoneNumber varchar(20) Default NULL,
+>>>>>>> branch 'Develop' of https://github.com/WSU-4110/Tecducate
     prefLesson int not null default 0,
     profLVL int not null default 1,
 	userID INT(10) NOT NULL auto_increment,

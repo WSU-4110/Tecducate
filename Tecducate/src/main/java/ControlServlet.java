@@ -147,7 +147,12 @@ public class ControlServlet extends HttpServlet {
 	    	request.setAttribute("email", email);
 	    	request.setAttribute("phoneNum", phoneNum);
 	    	List<user> userList = userDAO.listAllUsers();
+	    	
+	    	int prefLesson = userDAO.getLesson(email);
+	    	List<lessonData> otherLesson = lessonDAO.getOtherLesson(prefLesson);
 	    	request.setAttribute("userList", userList);
+	    	request.setAttribute("otherLesson", otherLesson);
+	    	
 	        RequestDispatcher dispatcher = request.getRequestDispatcher("profileView.jsp");
 	        dispatcher.forward(request, response);
 	    }
