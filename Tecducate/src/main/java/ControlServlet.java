@@ -62,6 +62,10 @@ public class ControlServlet extends HttpServlet {
                 System.out.println("The action is: lesson");
                 lessonPage(request, response);           	
                 break;
+        	case "/GetlessonData": 
+                System.out.println("The action is: lesson");
+                GetlessonPage(request, response);           	
+                break;
         	case "/quiz": 
                 System.out.println("The action is: quiz");
                 quizPage(request, response);           	
@@ -147,7 +151,12 @@ public class ControlServlet extends HttpServlet {
 	    	request.setAttribute("email", email);
 	    	request.setAttribute("phoneNum", phoneNum);
 	    	List<user> userList = userDAO.listAllUsers();
+	    	
+	    	int prefLesson = userDAO.getLesson(email);
+	    	List<lessonData> otherLesson = lessonDAO.getOtherLesson(prefLesson);
 	    	request.setAttribute("userList", userList);
+	    	request.setAttribute("otherLesson", otherLesson);
+	    	
 	        RequestDispatcher dispatcher = request.getRequestDispatcher("profileView.jsp");
 	        dispatcher.forward(request, response);
 	    }
@@ -194,6 +203,48 @@ public class ControlServlet extends HttpServlet {
 	    	request.setAttribute("detail9", detail9);
 	    	
 	    	request.setAttribute("prefLesson", prefLesson);
+	    	request.getRequestDispatcher("lessonView.jsp").forward(request, response);
+	    }
+	    
+	    
+	    private void GetlessonPage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException{
+	    	System.out.println("Lesson View");
+	    	currentUser = (String) session.getAttribute("username");
+	    	int currentID = Integer.parseInt(request.getParameter("id")); 
+	    
+	    	lessonData lessonData = lessonDAO.getLessonData(currentID);
+	    	
+	    	
+	    	String title = lessonData.getTitle();
+	    	String description = lessonData.getDescription();
+	    	String topic1 = lessonData.getTopic1();
+	    	String topic2 = lessonData.getTopic2();
+	    	String topic3 = lessonData.getTopic3();
+	    	String detail1 = lessonData.getDetail1();
+	    	String detail2 = lessonData.getDetail2();
+	    	String detail3 = lessonData.getDetail3();
+	    	String detail4 = lessonData.getDetail4();
+	    	String detail5 = lessonData.getDetail5();
+	    	String detail6 = lessonData.getDetail6();
+	    	String detail7 = lessonData.getDetail7();
+	    	String detail8 = lessonData.getDetail8();
+	    	String detail9 = lessonData.getDetail9();
+	    	
+	    	request.setAttribute("title", title);
+	    	request.setAttribute("description", description);
+	    	request.setAttribute("topic1", topic1);
+	    	request.setAttribute("topic2", topic2);
+	    	request.setAttribute("topic3", topic3);
+	    	request.setAttribute("detail1", detail1);
+	    	request.setAttribute("detail2", detail2);
+	    	request.setAttribute("detail3", detail3);
+	    	request.setAttribute("detail4", detail4);
+	    	request.setAttribute("detail5", detail5);
+	    	request.setAttribute("detail6", detail6);
+	    	request.setAttribute("detail7", detail7);
+	    	request.setAttribute("detail8", detail8);
+	    	request.setAttribute("detail9", detail9);
+	    	
 	    	request.getRequestDispatcher("lessonView.jsp").forward(request, response);
 	    }
 	    
