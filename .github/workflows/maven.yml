@@ -9,9 +9,9 @@
 name: Java CI with Maven
 on:
   push:
-    branches: [ "Geovanni" ]
+    branches: [ "**" ]
   pull_request:
-    branches: [ "Geovanni" ]
+    branches: [ "**" ]
 jobs:
   build:
     runs-on: ubuntu-latest
