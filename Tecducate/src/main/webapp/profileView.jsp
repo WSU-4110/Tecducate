@@ -23,6 +23,7 @@
         <a href="#" id="settings-icon"><i class="fas fa-cog"></i> Settings</a>
     </header>
     <button class="navbar__btn" id="change-style-button" onclick="toggleStyles()">Style</button>
+    <a href="logout" >Logout</a>
     
 
 <section class="user-info-box">
@@ -81,7 +82,7 @@
         });
 
         document.getElementById("go-to-lesson-button").addEventListener("click", function () {
-            window.location.href = "lessonView.jsp";
+            window.location.href = "lesson";
         });
     </script>
 

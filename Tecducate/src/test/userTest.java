@@ -1,5 +1,3 @@
-/* Maria's unittest file*/
-
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.AfterAll;
@@ -68,6 +66,8 @@ class userTest {
 	@Test
 	void testGetPrefLesson() {
         assertEquals(0, testUser.getPrefLesson());
+		//fail("Not yet implemented");
+        //assertEquals(1, testUser.getPrefLesson());
 		//fail("Not yet implemented");
 	}
 	

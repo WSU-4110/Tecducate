@@ -139,6 +139,21 @@ public class userDAO
         preparedStatement.close();
         return rowDeleted;     
     }
+    
+    public boolean reset(String email) throws SQLException {
+        String sql = "UPDATE User SET profLVL = 1 WHERE email = ?";
+          connect_func();
+          
+          preparedStatement = (PreparedStatement) connect.prepareStatement(sql);
+          preparedStatement.setString(1, email);
+          
+          boolean levelReset = preparedStatement.executeUpdate() > 0;
+          preparedStatement.close();
+          
+          return levelReset;
+      
+      }
+
      
     public boolean update(user users) throws SQLException {
         String sql = "update User set firstName=?, lastName =?,password = ?, phoneNumber =? where email = ?";
@@ -255,6 +270,34 @@ public class userDAO
         System.out.println("GET USERID TERMINATED IN USERDAO");
        
         return uID;
+    }
+    
+    
+    public int getLesson(String email) throws SQLException {
+    	System.out.println("GET LESSON RUNNNING IN USERDAO");
+    	
+    	int prefLesson = 0;
+        String sql = "SELECT prefLesson FROM User WHERE email = ?";
+         
+        connect_func();
+         
+        preparedStatement = (PreparedStatement) connect.prepareStatement(sql);
+        preparedStatement.setString(1, email);
+         
+        ResultSet resultSet = preparedStatement.executeQuery();
+         
+        if (resultSet.next()) {
+        	prefLesson = resultSet.getInt("prefLesson");
+        }
+         
+        resultSet.close();
+        statement.close();
+        
+        System.out.println("PrefLesson: " + prefLesson);
+        
+        System.out.println("GET LESSON TERMINATED IN USERDAO");
+       
+        return prefLesson;
     }
     
     public user getUser(String email) throws SQLException {
