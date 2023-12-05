@@ -20,14 +20,13 @@
         <form action = "update" method = "POST" onsubmit="return handleFormSubmit()"> <!--Send From information-->
 	      <input type="hidden" name="changePasswordButton" id="changePasswordButton" value="">
 
-                
             <fieldset>             
                 <ul class="Personal-Infomation">
                     <li>
                     	<label for="email">Email address<br></label>
-                    	<input type="text" name="email" id="email" value="" disabled></li>
-                    <li><label for ="first">First name<br></label><input type="text" name="firstName" id="first" value=""></li>
-                    <li><label for="last">First name<br></label><input type="text" name="lastName" id="last" value=""></li>
+                    	<input type="text" name="email" id="email" value="${user.email}" disabled></li>
+                    <li><label for ="first">First name<br></label><input type="text" name="firstName" id="first" value="${user.firstName}"></li>
+                    <li><label for="last">First name<br></label><input type="text" name="lastName" id="last" value="${user.lastName}"></li>
 		    <li><label for="phone">Phone Number<br></label><input type="text" name="phoneNumber" id="phoneNumber" value="${user.phoneNum}"></li>
                     <small><input id="ChangePass-Button" name="changePasswordButton" type="button" onclick="handlePasswordChange()" value="Change Password" style="width: 200px; font-size: 16px"></small>
                     <input id="NewPassword" type="password" value="${user.password}" name="NewPassword" style="display: none;" ><br>
