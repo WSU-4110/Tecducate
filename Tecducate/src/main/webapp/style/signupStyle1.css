@@ -1,0 +1,188 @@
+@charset "ISO-8859-1";
+
+ html{
+  min-height: 100vh;
+  color:rgb(64, 128, 128);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+  background-color: rgb(64, 128, 128);
+ }
+
+ header{
+    text-align: center; 
+    text-shadow: 0 0 15px rgb(128, 128, 128);
+ }
+
+
+#main {
+  text-align: center;
+  width: 100%;
+  height: 200px;
+  border: 1px solid #c3c3c3;
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  background-color: rgb(64, 128, 128);
+  padding: 20px 0;
+  margin-bottom: 20px;
+  
+}
+
+
+body{
+    min-height: 100vh; 
+    background-color: rgb(196,196,196);
+    color: white;
+    padding-left: 20%;
+    padding-right: 20%;
+    /*text-wrap: wrap;*/ 
+    /*Adding a background image*/
+    background-image: url(/assets/Home-Backgrounf-Image.jpg);
+    background-size: cover; /*image will cover the whole body part*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.backButton{
+	margin: 1em;
+    border-radius: 5%;
+    border-color: black;
+    background-color: rgba(126, 208, 231, 0.962);
+    box-shadow:0 0 10px #235ca6;
+    font-size: larger;
+    width: 95%;
+    height: 4.2%;
+    min-height: 20px;
+}
+.Update-Button{
+	color: rgb(0, 0, 0);
+    font-weight: bold;
+    margin: 1em;
+    border-radius: 5%;
+    border-color: #000000;
+    background-color: rgb(196,196,196);
+    font-size: large;
+    width: 95%;
+    height: 4.2%;
+    min-height: 30px;
+}
+
+.Update-Button:hover{
+    background-color: rgb(128, 128, 128);
+}
+
+ form{
+    text-align: left;
+    list-style: none;
+    padding: 10px;
+    padding-left: 0;
+    box-shadow:0 0 10px #102747;
+    background-color: rgba(64, 128, 128);
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+.Personal-Infomation li{
+    list-style: none;
+}
+/*Style for input textbox*/
+input[type="text"]{
+    width: 95%;
+    height: 4.2%;
+    min-height: 20px;
+    font-size: 16px;
+    padding: 5px;
+    border: 2px solid black;
+    color:rgb(6, 4, 5); /*text color inside the box*/
+}
+
+
+/*Text color changes for invalid input int eh case of Existing image*/
+input.invalid{
+    color: brown;
+}
+.Prefferences li{
+    list-style: none;
+}
+
+/*Style For Submit Button*/
+.Submit-Butoon{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    margin: 1em;
+    border-radius: 5%;
+    border-color: #000000;
+    background-color: rgb(196,196,196);
+    font-size: large;
+    width: 95%;
+    height: 4.2%;
+    min-height: 30px;
+}
+.Submit-Butoon:hover{
+    background-color: rgb(128, 128, 128);
+}
+/*Style For Reset Button*/
+.Reset-button{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    margin: 1em;
+    border-radius: 5%;
+    border-color: #000000;
+    background-color: rgb(196,196,196);
+    font-size: large;
+    width: 95%;
+    height: 4.2%;
+    min-height: 30px;
+}
+.Reset-button:hover{
+    background-color: rgb(128, 128, 128);
+}
+
+h1 {
+	margin-top: 50px;
+	margin-bottom: 80px;
+	font-weight: bolder;
+}
+
+
+/* Style for the 'style' button */
+.navbar__btn {
+	float: right;
+	font-weight: bold;
+	margin-top: -25px;
+}
+ 
+ 
+/* Style 2*/
+
+.style {
+	background-color: rgb(223, 217, 253);
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+ .style form{
+    text-align: left;
+    list-style: none;
+    padding: 10px;
+    padding-left: 0;
+    box-shadow:0 0 10px #102747;
+    background-color: rgb(192, 192, 192);
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+   
+}
+
+.style html {
+	background-color: rgb(192, 192, 192);
+}
+
+.style #main {
+	  background-color: rgb(192, 192, 192);
+}
+
+
