@@ -6,5 +6,6 @@ import javax.servlet.http.HttpServletResponse;
 
 // Lesson interface
 public interface Lesson {
-	void displayContent();
+    void displayContent();
+
 }
