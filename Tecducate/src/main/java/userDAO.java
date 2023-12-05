@@ -94,11 +94,12 @@ public class userDAO
             String firstName = resultSet.getString("firstName");
             String lastName = resultSet.getString("lastName");
             String password = resultSet.getString("password");
+            String phoneNum = resultSet.getString("phoneNumber");
             int prefLesson = resultSet.getInt("prefLesson");
             int profLVL = resultSet.getInt("profLVL");
 
              
-            user users = new user(email,firstName,lastName,password,prefLesson, profLVL);
+            user users = new user(email,firstName,lastName,password,phoneNum,prefLesson, profLVL);
             listUser.add(users);
         }        
         resultSet.close();
@@ -140,14 +141,15 @@ public class userDAO
     }
      
     public boolean update(user users) throws SQLException {
-        String sql = "update User set firstName=?, lastName =?,password = ? where email = ?";
+        String sql = "update User set firstName=?, lastName =?,password = ?, phoneNumber =? where email = ?";
         connect_func();
         
         preparedStatement = (PreparedStatement) connect.prepareStatement(sql);
-        preparedStatement.setString(1, users.getEmail());
-		preparedStatement.setString(2, users.getFirstName());
-		preparedStatement.setString(3, users.getLastName());
-		preparedStatement.setString(4, users.getPassword());
+		preparedStatement.setString(1, users.getFirstName());
+		preparedStatement.setString(2, users.getLastName());
+		preparedStatement.setString(3, users.getPassword());
+	    	preparedStatement.setString(4, users.getPhoneNum());
+	    	preparedStatement.setString(5, users.getEmail());
          
         boolean rowUpdated = preparedStatement.executeUpdate() > 0;
         preparedStatement.close();
@@ -270,10 +272,11 @@ public class userDAO
             String firstName = resultSet.getString("firstName");
             String lastName = resultSet.getString("lastName");
             String password = resultSet.getString("password");
+	    String phoneNum = resultSet.getString("phoneNumber");
             int prefLesson = resultSet.getInt("prefLesson");
             int profLVL = resultSet.getInt("profLVL");
             
-            user = new user(email, firstName, lastName, password, prefLesson, profLVL);
+            user = new user(email, firstName, lastName, password, phoneNum, prefLesson, profLVL);
         }
          
         resultSet.close();

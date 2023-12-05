@@ -27,26 +27,27 @@ public class user
 	    }
 
 	    
-	    public user(String email,String firstName, String lastName, String password, int prefLesson, int profLVL) 
+	    public user(String email,String firstName, String lastName, String password, String phoneNum, int prefLesson, int profLVL) 
 	    {
-	    	this(firstName,lastName,password, prefLesson, profLVL, 0);
+	    	this(firstName,lastName,password,phoneNum,prefLesson, profLVL, 0);
 	    	setEmail(email);
 	    }
 	 
 	
-	    public user(String firstName, String lastName, String password, int prefLesson, int profLVL, int userID) 
+	    public user(String firstName, String lastName, String password, String phoneNum, int prefLesson, int profLVL, int userID) 
 	    {
 	    	setFirstName(firstName);
 	    	setLastName(lastName);
 	    	setPassword(password);
 	    	setPrefLesson(prefLesson);
+		setPhoneNum(phoneNum);
 	    	setProfLVL(profLVL);
 	    	setUserID(userID);
 	    }
 	    
 	    public user(String email,String firstName, String lastName, String password, String phoneNum, int prefLesson) 
 	    {
-	    	this(firstName,lastName,password, prefLesson, 1, 0);
+	    	this(firstName,lastName,password,phoneNum, prefLesson, 1, 0);
 	    	setEmail(email);
 	    	setPhoneNum(phoneNum);
 	    }

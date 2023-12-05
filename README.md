@@ -18,12 +18,18 @@ Team members:
 * Get suggestions for improvement <br>
 * Leaderboard- See how others are doing on their quizzes <br>
  
- Subject to change*****************************
+
  <h3>Getting Started</h3>
-  * Download Latest Version of Python <br>
-  * Download PyCharm<br>
-  * Download Django<br>
-  * Download the things in requirement.txt<br>
+ > * Download Eclipse <br>
+ > * Set up Apache tomcat<br>
+ > * Download JDK version 15<br>
+ > * Import the project from github<br>
+ > * Chamnge the path to JDK 15<br>
+ > * Create Java Home and paste the JDK 15 directory path. <br>
+ > * Create a new system environment variable called Catalina Home and paste tomcat directory path. <br>
+ > * Install MySQL and create a root user
+ > * Upload the tecduQuery.sql into the MySql. 
+ > * Go to main/src/java and run the controlservelet.java 
 
   After opening project in pycharm, on terminal run commands: 
   
