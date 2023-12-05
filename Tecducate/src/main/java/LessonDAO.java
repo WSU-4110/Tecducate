@@ -118,7 +118,3 @@ public class LessonDAO
         return Lesson;     
         
     }
-   
-    /*
-    INDEX AND PULL OUT
-    */
