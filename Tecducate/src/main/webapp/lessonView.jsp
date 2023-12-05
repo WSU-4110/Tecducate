@@ -73,7 +73,7 @@
 
     </header>
     
-    <h1>Phishing Emails</h1>
+    <h1>${title}</h1>
     
 
     <div class="container">
@@ -84,15 +84,7 @@
 
     </div>
     <div class="col-12 col-md-6 col-lg-6">
-    <p>  <br> <br> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>  <br> <br> <br>${description}</p>
               
     </div>
   </div>
@@ -103,19 +95,17 @@
           <div class="panel panel-default">
             <div class="panel-heading">
               <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">How Do You Identify a Phishing Email?</a>
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">${topic1}</a>
               </h4>
             </div>
             <div id="collapse1" class="panel-collapse collapse">
               <div class="panel-body"> <p> 
 	              <ul>
-	              	<li><strong>Check the Sender:</strong> Always check the sender's email address. Legitimate companies will use email addresses that match their official domains. If it looks suspicious or unfamiliar, be cautious. 
+	              	<li>${detail1} 
 	              	</li>
-	              	<li><strong>Look for Mistakes:</strong> Always check the sender's email address. Legitimate companies will use email addresses that match their official domains. If it looks suspicious or unfamiliar, be cautious. 
+	              	<li>${detail2} 
 	              	</li>
-	              	<li><strong>Beware of Urgency:</strong> Phishing emails often create a sense of urgency, making you feel like you need to act quickly. Take a breath and think before clicking or providing any information. 
-	              	</li>
-	              	<li><strong>Hover Before You Click:</strong> You can hover your mouse over links without clicking to see the real web address. If the address looks different from what you expect, it might be a phishing attempt. 
+	              	<li>${detail3} 
 	              	</li>
 	             </ul></p>
               </div>
@@ -124,18 +114,17 @@
           <div class="panel panel-default">
             <div class="panel-heading">
               <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">How To Prevent Yourself From It?</a>
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">${topic2}</a>
               </h4>
             </div>
             <div id="collapse2" class="panel-collapse collapse">
               <div class="panel-body"><p>
               	<ul>
-	              	<li><strong>Use Strong Passwords:</strong> Create strong, unique passwords for your online accounts. This makes it harder for attackers to access your personal information. 
+	              	<li>${detail4} 
 	              	</li>
-	              	<li><strong>Update Security Software:</strong> Keep your computer's antivirus and anti-malware software up to date. These tools help protect you from various online threats. 
+	              	<li>${detail5} 
 	              	</li>
-	              	<li><strong>Verify Requests:</strong> If you receive an unexpected request for personal or financial information, verify it independently. Call the company using a known phone number, not the one provided in the email.
-	              	</li>
+	              	<li>${detail6} 
 	             </ul></p>
               </div>
 
@@ -144,17 +133,17 @@
           <div class="panel panel-default">
             <div class="panel-heading">
               <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">What to Do If You Suspect a Phishing Attempt?</a>
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">${topic3}</a>
               </h4>
             </div>
             <div id="collapse3" class="panel-collapse collapse">
-              <div class="panel-body"><p> If you ever suspect an email is a phishing attempt, don't panic. Here's what you can do:
+              <div class="panel-body"><p>
               	<ul>
-	              	<li><strong>Use Strong Passwords:</strong> Create strong, unique passwords for your online accounts. This makes it harder for attackers to access your personal information. 
+	              	<li>${detail7} 
 	              	</li>
-	              	<li><strong>Update Security Software:</strong> Keep your computer's antivirus and anti-malware software up to date. These tools help protect you from various online threats. 
+	              	<li>${detail8} 
 	              	</li>
-	              	<li><strong>Verify Requests:</strong> If you receive an unexpected request for personal or financial information, verify it independently. Call the company using a known phone number, not the one provided in the email.
+	              	<li>${detail9} 
 	              	</li>
 	             </ul></p>
              
@@ -166,7 +155,7 @@
 
 
       <div class="container1">
-        <a href="quiz?id=100" target="_blank">View Quiz!</a>
+        <a href="quiz?id=${prefLesson}" target="_blank">View Quiz!</a>
       </div>
       
     <footer id="main">

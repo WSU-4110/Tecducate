@@ -257,6 +257,34 @@ public class userDAO
         return uID;
     }
     
+    
+    public int getLesson(String email) throws SQLException {
+    	System.out.println("GET LESSON RUNNNING IN USERDAO");
+    	
+    	int prefLesson = 0;
+        String sql = "SELECT prefLesson FROM User WHERE email = ?";
+         
+        connect_func();
+         
+        preparedStatement = (PreparedStatement) connect.prepareStatement(sql);
+        preparedStatement.setString(1, email);
+         
+        ResultSet resultSet = preparedStatement.executeQuery();
+         
+        if (resultSet.next()) {
+        	prefLesson = resultSet.getInt("prefLesson");
+        }
+         
+        resultSet.close();
+        statement.close();
+        
+        System.out.println("PrefLesson: " + prefLesson);
+        
+        System.out.println("GET LESSON TERMINATED IN USERDAO");
+       
+        return prefLesson;
+    }
+    
     public user getUser(String email) throws SQLException {
     	user user = null;
         String sql = "SELECT * FROM User WHERE email = ?";
