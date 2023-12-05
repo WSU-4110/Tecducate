@@ -5,10 +5,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public  class BasicLesson implements Lesson {
-    private int lessonId;
-    private String details;
-    private String samples;
-    private String lessonLink;
+    protected int lessonId;
+    protected String details;
+    protected String samples;
+    protected String lessonLink;
   
     public BasicLesson(int lessonId, String Details, String Samples) {
     	setlessonID(lessonId);
@@ -47,15 +47,17 @@ public  class BasicLesson implements Lesson {
     }
     
     
-
-   
-    @Override
-    public void displayContent(){
-    }
+	@Override
+	public void displayContent(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		
+	}
 
 	@Override
 	public void displayContent() {
 		// TODO Auto-generated method stub
 		
 	}
+
 }
