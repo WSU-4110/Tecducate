@@ -99,7 +99,7 @@ public class LessonDAO
         preparedStatement = (PreparedStatement) connect.prepareStatement(sql);
         preparedStatement.setInt(1, lessonID);
         
-        
+         
         ResultSet resultSet = preparedStatement.executeQuery();
         
         if (resultSet.next()) {
