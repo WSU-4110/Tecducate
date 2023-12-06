@@ -32,24 +32,10 @@
 		    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 		      <a class="navbar-brand" href="#"></a>
 		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-		        <li class="nav-item">
-		          <a class="nav-link" href="#">Tecduate</a>
-		        </li>
-		        <li class="nav-item">
-		          <a class="nav-link" href="#">About Us</a>
-		        </li>
-		        <li class="nav-item">
-		          <a class="nav-link">Contact Us</a>
-		        </li>
-		        <li class="nav-item">
-		          <a class="nav-link">Sign Up</a>
-		        </li>
-		        <li class="nav-item">
-		          <a class="nav-link">Log in</a>
-		        </li>
+		        
 		      </ul>
 		      
-		      <button class="navbar__btn" id="change-style-button" onclick="toggleStyles()">Style</button>
+		      <button style= "float: right;" class="navbar__btn" id="change-style-button" onclick="toggleStyles()">Style</button>
 		      
 		      <div id="searchBox">
 		      		<input type="text" id="input" placeholder="Search" />
@@ -159,13 +145,20 @@
       </div>
       
     <footer id="main">
-	    	<p><img class="image" src="http://localhost:8080/Tecducate/asset/logo.png" style="width: 170px; height: 170px; margin-left: 90px; float: left;"> 
-        	</br> 42 W Warren Ave, Detroit, MI | 313-000-0000 | Tecducate@gmail.com </br></br>
-        	<a href="https://www.instagram.com/"><img src="http://localhost:8080/Tecducate/asset/instagram.png" alt="Instagram" style="width: 50px; height: 35px; margin-left: 50px;"></a>          
-    		<a href="https://www.facebook.com/"><img src="http://localhost:8080/Tecducate/asset/facebook.png" alt="Facebook" style="width: 40px; height: 35px; margin-left: 50px;"></a> 
-    		<a href="https://www.youtube.com/"><img src="http://localhost:8080/Tecducate/asset/youtube.png" alt="YouTube" style="width: 50px; height: 35px; margin-left: 50px;"></a></br>
-       		</br> &copy; 2023 Tecducate</p>
+	    	<img class="image" src="http://localhost:8080/Tecducate/asset/logo.png" style="width: 170px; height: 170px; margin-left: 90px; margin-right: 120px; float: left;"> 
+        	
+        	
+        	<ul style="float: center; list-style-type: none;">
+        		<li></br> 42 W Warren Ave, Detroit, MI | 313-000-0000 | Tecducate@gmail.com </br></br></li>
+        		<li><a href="https://www.instagram.com/"><img src="http://localhost:8080/Tecducate/asset/instagram.png" alt="Instagram" style="width: 50px; height: 35px; margin-left: 10px;"></a>         
+    			<a href="https://www.facebook.com/"><img src="http://localhost:8080/Tecducate/asset/facebook.png" alt="Facebook" style="width: 40px; height: 35px; margin-left: 10px;"></a>
+    			<a href="https://www.youtube.com/"><img src="http://localhost:8080/Tecducate/asset/youtube.png" alt="YouTube" style="width: 50px; height: 35px; margin-left: 10px;"></a></br></li>
+        	    <li></br>&copy; 2023 Tecducate</li>
+        
+        	</ul>
+           	
     </footer>
+    
     
 <script src="searchButton.js"></script>
 <script src="changeStyle.js"></script>

@@ -1,5 +1,5 @@
 html {
-  background-color:rgb(58, 133, 98); 
+  background-color:rgb(192, 192, 192); 
 }
 
 body {
@@ -20,14 +20,12 @@ h1 {
 }
 
 
-
-
 #pageFooter {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   margin: 0em;
-  background: #262626;
+  background: rgb(64, 128, 128);
   padding: 1em;
   color: white;
   position: relative;
