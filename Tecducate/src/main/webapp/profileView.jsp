@@ -23,7 +23,7 @@
         <a href="#" id="settings-icon"><i class="fas fa-cog"></i> Settings</a>
     </header>
     <button class="navbar__btn" id="change-style-button" onclick="toggleStyles()">Style</button>
-    <a href="logout" >Logout</a>
+    <a style="margin: 1em; border: 0.5em solid rgb(64, 128, 128); padding: 0.5em; text-decoration: none; display: inline-block; background-color: lightgray; border-radius: 0.5em;" href="logout" >Logout</a>
     
 
 <section class="user-info-box">
