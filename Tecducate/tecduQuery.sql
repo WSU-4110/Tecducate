@@ -13,11 +13,11 @@ CREATE TABLE if not exists User(
 	PRIMARY KEY (userID)
 ); 
 alter table user auto_increment = 500;
-    
 insert into User(email, firstName, lastName, password, profLVL, prefLesson, phoneNumber)
 values ('susie@gmail.com', 'Susie ', 'Guzman', 'susie1234', 1, 101, '313-000-0000'),
 		('test', 'test', 'test', 't1234', 2, 100, '346-784-0223'),
 		('Donald@gmail.com', 'default', 'default','pass1234', 3, 102, '901-354-6577');
+select * from User;
 
 insert into User(email, profLVL, prefLesson)
 values ('Billy@gmail.com', 2, 100),
