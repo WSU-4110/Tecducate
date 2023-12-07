@@ -5,15 +5,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public  class BasicLesson implements Lesson {
-    protected int lessonId;
-    protected String details;
-    protected String samples;
-    protected String lessonLink;
+    private int lessonId;
+    private String details;
+    private String samples;
+    private String lessonLink;
   
     public BasicLesson(int lessonId, String Details, String Samples) {
-    	setlessonID(lessonId);
-        setDetails(Details);
-        setSamples(Samples);
+        this.lessonId = lessonId;
+        this.details = Details;
+        this.samples = Samples;
     }
     
     public void setlessonID(int ID){
@@ -23,7 +23,7 @@ public  class BasicLesson implements Lesson {
     	return lessonId;
     }
     
-    public void setDetails(String Details) {
+    private void setDetails(String Details) {
     	this.details = Details;
     }
     public String getDetails() {
@@ -31,7 +31,7 @@ public  class BasicLesson implements Lesson {
     		
     }
     
-    public void setSamples(String Samples) {
+    private void setSamples(String Samples) {
     	this.samples = Samples;
     }
     public String getSamples() {
@@ -54,10 +54,10 @@ public  class BasicLesson implements Lesson {
 		
 	}
 
+
 	@Override
 	public void displayContent() {
 		// TODO Auto-generated method stub
 		
 	}
-
 }
