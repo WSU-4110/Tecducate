@@ -47,15 +47,15 @@ create table if not exists Quiz(
 alter table quiz auto_increment = 10;
 
 insert into Quiz(lessonID, LVL, question)
-values (100, 1, "What is phishing?"),
-		(100, 2, "What Should you do to avoid phishing scams?"),
-        (100, 3, "Which option is a phishing scam?"),
+values (101, 1, "What is phishing?"),
+		(101, 2, "What Should you do to avoid phishing scams?"),
+        (101, 3, "Which option is a phishing scam?"),
         (102, 1, "What does account management mean?"),
 		(102, 2, "What is a solid account management practice?"),
         (102, 3, "Which option follows appropriate account management?"),
-        (101, 1, "What is a email?"),
-		(101, 2, "What is a good way to identify a phishing email?"),
-        (101, 3, "Which option is the phishing email?");
+        (100, 1, "What is a email?"),
+		(100, 2, "What is a good way to identify a phishing email?"),
+        (100, 3, "Which option is the phishing email?");
 SET FOREIGN_KEY_CHECKS=1;
 
 

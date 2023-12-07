@@ -211,6 +211,7 @@ public class ControlServlet extends HttpServlet {
 	    	System.out.println("Lesson View");
 	    	currentUser = (String) session.getAttribute("username");
 	    	int currentID = Integer.parseInt(request.getParameter("id")); 
+	    	int prefLesson = currentID;
 	    
 	    	lessonData lessonData = lessonDAO.getLessonData(currentID);
 	    	
@@ -244,6 +245,8 @@ public class ControlServlet extends HttpServlet {
 	    	request.setAttribute("detail7", detail7);
 	    	request.setAttribute("detail8", detail8);
 	    	request.setAttribute("detail9", detail9);
+	    	
+	    	request.setAttribute("prefLesson", prefLesson);
 	    	
 	    	request.getRequestDispatcher("lessonView.jsp").forward(request, response);
 	    }
