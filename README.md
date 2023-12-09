@@ -1,11 +1,14 @@
 <h1> <img src ="Tecducate/src/main/webapp/asset/logo.png" alt="Logo"></h1>
 
 
-<h2>Project name: Tecducate</h2>
+<h2>Tecducate</h2>
 
 <h3>Introduction: </h3>
 
 The creation of this project was undertaken as part of the Software Engineering course at Wayne State University. At Tecducate, we understand the importance of online safety, especially for our cherished seniors. As the digital landscape evolves, so do the threats it poses. This registration page is your gateway to a unique platform designed exclusively for elderly individuals seeking to enhance their cybersecurity knowledge.
+
+* [Review Requirements](https://github.com/WSU-4110/Tecducate/issues) · [See wiki page](https://github.com/WSU-4110/Tecducate/wiki)
+
     
 <h3>Team members:</h3>
 
@@ -15,9 +18,7 @@ The creation of this project was undertaken as part of the Software Engineering 
 4. Abdullahi (AbdullahiAyantayo)
 5. Mohammad (mhazadegan)
 
-<h1> The Look <br></h1>
-              
- <img src ="" alt="Logo">
+
 <h2> Features </h2><p>
  
 * Create an account using your first name, last name, email address, phone number, and password. Then, choose which lesson you would like to learn about.<br>
@@ -33,9 +34,11 @@ The creation of this project was undertaken as part of the Software Engineering 
  
 ## Technologies
 The project was created with
-* Eclipse
-* MySQL
-* Tomcat
+* [![Eclipse Logo](Tecducate/src/main/webapp/asset/Eclipse%20logo.png)](https://www.eclipse.org/)
+* [![MySQL Logo](Tecducate/src/main/webapp/asset/Mysql_logo.png)](https://www.mysql.com/)
+* [![Tomcat Logo](Tecducate/src/main/webapp/asset/apache_tomcat_logo.png)](https://tomcat.apache.org/)
+
+
 
  <h3> Setup</h3>
  > * Download Eclipse <br>
@@ -63,10 +66,26 @@ The project was created with
   Abdullahi
   ```
 
-## **Project status** : Close 
+## **Project status** : 
+This project is no longer actively maintained. Feel free to fork it if you find it useful.
+
 ## Sources
 * [krebsonsecurity](https://krebsonsecurity.com/)
 * [The Hacker News](https://thehackernews.com/)
 * [Stay Safe Online](https://staysafeonline.org/)
 * [Federal Trade Commission - How to Recognize and Avoid Phishing Scams](https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams)
 
+## Screenshots
+![Registration](Tecducate/src/main/webapp/Demo/Register.png)
+*Registration page*
+
+![InvalidCredentials](Tecducate/src/main/webapp/Demo/Invalid%20Credentials.png)
+*Invalid Credentials Illustration*
+
+![LgIn](Tecducate/src/main/webapp/Demo/log%20in.png)
+*Log In page*
+
+![Profile page](Tecducate/src/main/webapp/Demo/Profile%20page.png)
+*Profile page*
+
+## [See Full Demo Here](Tecducate/src/main/webapp/Demo)
