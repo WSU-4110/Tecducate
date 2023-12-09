@@ -1,0 +1,33 @@
+
+/*This makes the page responsive with different screen sizes. */
+
+@media screen and (max-width: 500px) {
+    body {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    img {
+        max-width: 80%;
+        height: auto;
+    }
+    .panel-body {
+        font-size: 14px;
+    }
+    .container {
+        padding: 10px;
+    }
+    header ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    header li {
+        margin: 5px 0;
+    }
+    footer {
+        text-align: center;
+        padding: 10px;
+    }
+}

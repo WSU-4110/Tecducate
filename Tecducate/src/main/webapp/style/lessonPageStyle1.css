@@ -1,0 +1,160 @@
+@charset "ISO-8859-1";
+
+/*STYLE 1*/
+
+body {
+	background-color: rgb(196, 196, 196);
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+h1{
+	text-align: center;
+	font-weight: bolder;
+	font-size: 70px;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	padding-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.image {
+  max-width: 90%;
+  display: block;  
+  margin: 0 auto;  
+  border: 2px solid #ddd;   
+  border-radius: 8px;  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.panel-group {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgb(64, 128, 128);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.panel-group:hover  {
+	background-color: rgb(128, 128, 128);
+	color: rgb(0, 0, 0);
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+/* add color inside the panels when clicked
+.panel-default:hover{
+	background-color: rgb(192, 239, 254);
+}*/
+
+
+/* panel tittle */
+h4 {
+	font-weight: bolder;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	text-align: center;
+}
+
+h4:hover {
+	color: rgb(64, 128, 128);
+	font-size: 30px;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+/*quiz button*/
+.container1 a:link, a:visited {
+  background-color: rgb(128, 128, 128);
+  color: white;
+  padding: 20px 45px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 5px 15px;  
+
+}
+
+/*quiz button*/
+.container1 a:hover, a:active {
+  background-color: rgb(64, 128, 128);
+}
+
+nav ul li {
+    display: inline; 
+    margin: 0 70px; 
+    font-size: 15px;
+    font-weight: bolder;
+    color: black;
+}
+
+
+.highlight {
+    background-color: yellow;
+    /* You can add more styling as needed */
+}
+
+
+#main {
+  text-align: center;
+  width: 100%;
+  height: 200px;
+  border: 1px solid #c3c3c3;
+  display: flex;
+  box-sizing: border-box;
+  background-color: rgb(64, 128, 128);
+  padding: 20px 0;
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+
+/*STYLE 2*/
+
+.style {
+	background-color: rgb(223, 217, 253);
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.style h1{
+	text-align: center;
+	font-weight: bolder;
+	font-size: 70px;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	padding-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.style .panel-group {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgb(128, 0, 128);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.style h4 {
+	font-weight: bolder;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.style h4:hover {
+	color: rgb(128, 0, 128);
+	font-size: 30px;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,103 @@
+@charset "ISO-8859-1";
+
+@charset "ISO-8859-1";
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(196, 196, 196);
+}
+
+header {
+    background-color: rgb(64, 128, 128);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: larger;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(64, 128, 128);
+    border: 1px solid ;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    background-color: rgb(white);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color:  rgb(128, 128, 128);
+    color: #333;
+}
+
+.button-group {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgb(64, 128, 128);
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+}  
+
+/* Style 2*/
+
+.style body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(196, 196, 196);
+}
+
+.style header {
+    background-color: rgb(128, 128, 192);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: larger;
+}
+
+.style section {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(128, 128, 192);
+    border: 1px solid ;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    text-align: center;
+}
+
+.style footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgb(128, 128, 192);
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+}  

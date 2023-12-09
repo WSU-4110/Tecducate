@@ -1,0 +1,66 @@
+html {
+  background-color:rgb(192, 192, 192); 
+}
+
+body {
+  margin: 0em; 
+  padding: 0; 
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+  display: flex;
+  flex-direction: column;
+   justify-content: center;
+}
+
+
+h1 {
+  font-size: 3em;
+  margin: 0;
+  text-align: center;
+  text-shadow: 2px 2px white;
+}
+
+
+#pageFooter {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 0em;
+  background: rgb(64, 128, 128);
+  padding: 1em;
+  color: white;
+  position: relative;
+  align-items: center;
+}
+
+#pageFooter h3{
+  font-size: 16px;
+  margin: 0.1em;
+}
+
+#pageFooter p{
+  font-size: 16px;
+  margin: 0.1em;
+  text-align: center;
+}
+
+#pageFooter p a{
+  font-size: 16px;
+  margin: 0.1em;
+  text-align: center;
+  text-transform: none;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+
+#pageFooter p a:hover{
+  font-size: 16px;
+  margin: 0.1em;
+  text-align: center;
+  text-transform: none;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  color: gray;
+}
+
